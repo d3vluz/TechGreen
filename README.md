@@ -27,7 +27,7 @@ O projeto será desenvolvido utilizando as seguintes tecnologias:
 Para questões, sugestões ou colaborações, entre em contato com a equipe de desenvolvimento:
 
 Matrícula | Nome | Contribuição | Github |Email
----|---|---|---|---
+:---:|:---:|:---:|:---:|:---:
 2220294 | Evandro Luz | FullStack + Requisitos | [DevLuz](https://github.com/d3vluz) | d3vluz@hotmail.com
 x | Rafael Silva | x | [Rafilde](https://github.com/Rafilde) | rafasilva182003@gmail.com
 x | Levi Tabosa | x | [x]() | email@hotmail.com
