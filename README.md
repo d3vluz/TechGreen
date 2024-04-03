@@ -29,7 +29,7 @@ Para questões, sugestões ou colaborações, entre em contato com a equipe de d
 Matrícula | Nome | Contribuição | Github |Email
 ---|---|---|---|---
 2220294 | Evandro Luz | FullStack + Requisitos | [DevLuz](https://github.com/d3vluz) | d3vluz@hotmail.com
-x | Rafael Silva | x | [x]() | email@hotmail.com
+x | Rafael Silva | x | [Rafilde](https://github.com/Rafilde) | rafasilva182003@gmail.com
 x | Levi Tabosa | x | [x]() | email@hotmail.com
 x | Hélio Nogueira | x | [x]() | email@hotmail.com
 x | Natanael Freitas | x | [x]() | email@hotmail.com
