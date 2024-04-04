@@ -16,11 +16,11 @@ O propósito essencial deste projeto é conceber e implementar uma plataforma de
 O projeto será desenvolvido utilizando as seguintes tecnologias:
 
 - **Frontend:**
-  - HTML5, CSS3, (completar)
-  - Design responsivo para uma experiência otimizada em diferentes dispositivos.
+  - HTML5, CSS3.
+  - Bootstrap (Design responsivo para uma experiência otimizada em diferentes dispositivos).
 
 - **Backend:**
-  - (COMPLETAR)
+  - JavaScript, Mongo, NodeJS, Typescript.
 
 ## **_Equipe_**
 
@@ -28,10 +28,10 @@ Para questões, sugestões ou colaborações, entre em contato com a equipe de d
 
 Matrícula | Nome | Contribuição | Github |Email
 :---:|:---:|:---:|:---:|:---:
-2220294 | Evandro Luz | FullStack + Requisitos | [DevLuz](https://github.com/d3vluz) | d3vluz@hotmail.com
-x | Rafael Silva | x | [Rafilde](https://github.com/Rafilde) | rafasilva182003@gmail.com
-x | Levi Tabosa | x | [x]() | email@hotmail.com
-x | Hélio Nogueira | x | [x]() | email@hotmail.com
-x | Natanael Freitas | x | [x]() | email@hotmail.com
+2220294 | Evandro Luz | FullStack + Requisitos | [DevLuz](https://github.com/d3vluz) | devluz@hotmail.com
+2212378 | Rafael Silva | Fullstack + DB | [Rafilde](https://github.com/Rafilde) | rafasilva182003@gmail.com
+2224207 | Levi Tabosa | Backend | [x]() | silvacostailevi@gmail.com
+2217693 | Hélio Nogueira | Backend + Figma | [Helionlf](https://github.com/helionlf) | heliofilhofhnlf@gmail.com
+2224186 | Natanael Freitas | Backend | [x]() | nattanael.freitas2341@gmail.com
 
 Agradecemos por contribuir para um futuro mais verde com o TechGreen! :leaves:
