@@ -650,8 +650,20 @@ header{
             cursor: pointer;
             width: 100px;
             padding: 10px 0;
-            border: none;
+            border: 2px #2a892a;
             border-radius: 5px;
+            font-weight: 700;
+            transition: all .3s;
+
+            &:hover{
+                background-color: #fafafa;
+                color: #2a892a;
+                border: 2px solid #2a892a;
+
+                & > p{
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 
