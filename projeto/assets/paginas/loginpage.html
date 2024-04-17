@@ -3,10 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
     <link rel="stylesheet" href="../estilos/style-cadastro-login.css">
-    <title>Login</title>
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+    <!-- Fim Estilos -->
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+    <title>TechGreen</title>
+    <!-- Fim Remix Icons -->
+    <title>Cadastro</title>
 </head>
 <body>
-    <!-- Ainda Não feita! -->
+    <div class="container">
+        <div class="form-image">
+            <img src="../imagens/teste2.png" alt=""> <!-- Imagem login -->
+        </div> <!-- Fim form-image -->
+
+        <div class="box-form">
+            <div class="form-header">
+                <div class="btnColor"></div>
+                <button id="btnSignin">Sign in</button>
+                <button id="btnSignup">Sign up</button>
+            </div> <!-- Fim form-header -->
+
+            <form action="#" autocomplete="off" method="post">
+                <div class="input-informacao">
+                    <div class="input-box">
+                        <label for="nome">Nome: *</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="sobrenome">Sobrenome: *</label>
+                        <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="email">Email: *</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="celular">Celular: </label>
+                        <input id="celular" type="tel" name="celular" placeholder="(xx) xxxx-xxxx">
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="senha">Senha: *</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="confirmarsenha">Confirme sua senha: *</label>
+                        <input id="confirmarsenha" type="password" name="confirmarsenha" placeholder="Digite sua senha" required>
+                    </div> <!--- Fim Input-box -->
+                </div> <!-- Fim input-informacao -->
+
+
+                <div class="rules-group">
+                    <div class="rules-input">
+                        <input type="radio" id="regras" name="regras" required>
+                        <label for="regras"> Ao clicar você afirmar concordar com os <a href="#">termos do site</a></label>
+                    </div> <!-- rules-input -->
+
+                    <div class="rules-input">
+                        <input type="radio" id="notificacao" name="notificacao">
+                        <label for="notificacao"> Ao clicar você concorda em receber novidades e pop-ups</label>
+                    </div> <!-- rules-input -->
+                </div> <!-- rules-group -->
+
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+            </form>
+        </div> <!-- Fim box-form -->
+    </div> <!-- Fim container -->
 </body>
 </html>

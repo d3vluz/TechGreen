@@ -1,1 +1,148 @@
-/* Em andamento. */
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+:root{
+    --bg-color: #ffffff;
+    --text-color: #181818;
+    --main-color: #f0f0f0;
+    --second-color: #616060; 
+    --theme-color: #099209;
+
+    --h1-font: 4.0rem;
+    --h2-font: 3.0rem;
+    --p-font: 1rem;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0ce9704d;
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D6F4D2;
+    padding: 1rem;
+
+    & img{
+        width: 31rem;
+    }
+}
+
+/* Botões Login/Cadastro */
+
+/* Seção Cadastro */
+.box-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa;
+    padding: 3rem;
+}
+
+.input-informacao{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+    & input{
+        margin: 0.6rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #00001c;
+
+        &:hover{
+            background-color: #e1e1e1e1 ;
+        }
+
+        &:focus-visible{
+            outline: 1px solid #099209;
+        }
+    }
+
+    & label{
+       font-size: 0.8rem;
+       font-weight: 600;
+       color: black; 
+
+       &::placeholder{
+        color: #000000be;
+       }
+    }
+}
+
+.rules-group{
+    font-size: 14px;
+    color: #949494e1;
+    font-weight: 500;
+
+    & a{
+        color: #949494e1;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--theme-color);
+        }
+    }
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: 2px solid transparent;
+    background-color: var(--theme-color);
+    padding: 0.65rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .6s;
+
+    &:hover{
+        opacity: 0.9;
+        border: 2px solid var(--theme-color);
+        background-color: #fafafa;
+        color: #00001c;
+        transition: all .6s;
+
+        & a{
+            color: var(--theme-color);
+        }
+    }
+
+    & a{
+        font-size: 0.95rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #fafafa;
+    }
+}
