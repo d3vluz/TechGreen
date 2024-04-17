@@ -19,8 +19,8 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0px";
 }
 window.addEventListener('resize', function() {
-    let teste = document.getElementById("mySidebar");
-    if (this.window.innerWidth <= 1300 && teste.style.width !== '0px') {
+    let sideBar = document.getElementById("mySidebar");
+    if (this.window.innerWidth <= 1300 && sideBar.style.width !== '0px') {
         document.getElementById("mySidebar").style.width = "0px";
     }
 });
