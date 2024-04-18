@@ -13,15 +13,15 @@
 }
 
 :root{
-    --cor-bg: #f2f2f2; /* Default Background */
-    --cor-prata: #DFDFE2; /* Contraste pro branco */
-    --cor-texto: #181818; /* Cor do texto */
-    
-    --cor-um: #234930;
-    --cor-dois: #366D4F;
-    --cor-tres: #A7C4B5;
-    --cor-quatro: #D6F4D2;
-    --cor-cinco: #FFD7C2;
+    --bg-color: #ffffff;
+    --text-color: #181818;
+    --main-color: #f0f0f0;
+    --second-color: #616060; 
+    --theme-color: #099209;
+
+    --primary-color: #181818;
+
+    --btn-color: #181818;
 
     --h1-font: 4.0rem;
     --h2-font: 3.0rem;
@@ -166,38 +166,52 @@ header{
 }
 
         /* PÁGINA SOBRE */
-    /* NOME SECTION */
-
-/* MAIN */
-.main {
+/* SECTION ABOUT */
+.about{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(../imagens/bg.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
-    gap: 5rem;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.main-box {
-    display: flex;
-    gap: 1rem;
-
-    & h3 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 15px;
+.about-text{
+    padding-top: 60px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    & h3{
+        font-size: var(--h1-font);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
     }
 
-    .main-box-image {
-        width: 50%;
-        background-color: rgba(0, 0, 0, 0.1); 
-    }
-
-    .main-box-text {
-        width: 50%;
-    }
-
-    .main-box-text p {
-        margin-bottom: 1.5rem;
+    & p{
+        width: 100%;
+        max-width: 560px;
+        font-size: var(--p-font);
+        font-weight: 400;
+        color: var(--second-color);
+        line-height: 33px;
+        margin-bottom: 35px;
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 
 
 /* FOOTER */
