@@ -168,6 +168,38 @@ header{
         /* PÁGINA SOBRE */
     /* NOME SECTION */
 
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.main-box {
+    display: flex;
+    gap: 1rem;
+
+    & h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .main-box-image {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+    .main-box-text {
+        width: 50%;
+    }
+
+    .main-box-text p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 /* FOOTER */
 .footer {
     display: grid;
