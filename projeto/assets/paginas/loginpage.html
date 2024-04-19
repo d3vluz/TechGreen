@@ -19,14 +19,28 @@
             <img src="../imagens/teste2.png" alt=""> <!-- Imagem login -->
         </div> <!-- Fim form-image -->
 
-        <div class="box-form">
-            <div class="form-header">
+        <div class="box-form"> <!-- container -->
+            <div class="form-header"> <!-- buttonsForm -->
                 <div class="btnColor"></div>
                 <button id="btnSignin">Sign in</button>
                 <button id="btnSignup">Sign up</button>
             </div> <!-- Fim form-header -->
 
-            <form action="#" autocomplete="off" method="post">
+            <form id="signin"  action="#" autocomplete="off" method="post">
+                <p class="saudacao">Que bom te ver denovo!<br> estavamos com <span>saudades</span></p>
+                    <input type="text" placeholder="E-mail" required>
+                    <i class="ri-mail-fill iEmail"></i>
+                    <input type="password" placeholder="Senha" required>
+                    <i class="ri-lock-fill iSenha"></i>
+
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span> Manter-me conectado</span>
+                </div> <!-- Fim checkbox -->
+                <button type="submit">Entrar</button>
+            </form> <!-- Fim sing-in -->
+
+            <form id="signup"  action="#" autocomplete="off" method="post">
                 <div class="input-informacao">
                     <div class="input-box">
                         <label for="nome">Nome: *</label>
@@ -64,19 +78,21 @@
                     <div class="rules-input">
                         <input type="radio" id="regras" name="regras" required>
                         <label for="regras"> Ao clicar você afirmar concordar com os <a href="#">termos do site</a></label>
-                    </div> <!-- rules-input -->
+                    </div> <!-- Fim rules-input -->
 
                     <div class="rules-input">
                         <input type="radio" id="notificacao" name="notificacao">
                         <label for="notificacao"> Ao clicar você concorda em receber novidades e pop-ups</label>
-                    </div> <!-- rules-input -->
-                </div> <!-- rules-group -->
+                    </div> <!-- Fim rules-input -->
+                </div> <!-- Fim rules-group -->
 
                 <div class="continue-button">
                     <button><a href="#">Continuar</a></button>
-                </div>
+                </div> <!-- Fim continue-button -->
             </form>
         </div> <!-- Fim box-form -->
     </div> <!-- Fim container -->
+
+    <script src="../../login.js"></script>
 </body>
 </html>
