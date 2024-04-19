@@ -145,7 +145,7 @@ header{
     background-color: var(--primary-color);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 60px; 
 
     & a {
         padding: 8px 8px 8px 32px;
@@ -182,7 +182,6 @@ header{
 .about-text{
     padding-top: 60px;
     opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
     & h3{
         font-size: var(--h1-font);
         font-weight: 700;
@@ -201,18 +200,55 @@ header{
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+/* SECTION MAIN */
+.main {
+   /* background-color: #099209;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    padding: 80px 50px;
 }
 
+.main-box {
+    /*background-color: aqua;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 50px;
+    align-items: center;
+}
 
+.main-box-text {
+    /*background-color: blueviolet;*/
+    min-width: 460px;
+}
+
+.main-box-text h2 {
+    font-size: var(--h2-font);
+    color: var(--text-color); 
+}
+
+.main-box-text p {
+    font-size: var(--p-font);
+    color: var(--text-color); 
+    line-height: 33px;
+    margin-top: 35px;
+}
+
+.main-box-image img {
+    width: 100%; 
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.main-box-image {
+    transform: rotate(-5deg);
+}
+
+.main-box:nth-child(even) .main-box-image {
+    transform: rotate(5deg);
+}
 
 /* FOOTER */
 .footer {
@@ -284,4 +320,42 @@ header{
             color: #099209;
         }
     }
+}
+
+    /*RESPONSIVIDADE*/
+/*SECTION MAIN*/
+@media (max-width: 999px) {
+
+    .main {
+        gap: 90px;
+    }
+
+    .main-box {
+        grid-template-columns: 1fr; 
+        gap: 50px;
+    }
+
+    .main-box:nth-child(2) .text-one,
+    .main-box:nth-child(1) .image-one {
+        order: 1; 
+    }
+
+    .main-box-text {
+        min-width: auto;
+    }
+
+    .main-box-image img {
+        width: 80%; 
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1299px) {
+
+    .main-box {
+        grid-template-columns: 600px 600px; 
+        gap: 0px 50px; 
+    }
+
 }
