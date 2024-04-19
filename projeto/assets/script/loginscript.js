@@ -1,8 +1,7 @@
 var formSignin = document.querySelector("#signin");
 var formSignup = document.querySelector("#signup");
 var btnColor = document.querySelector(".btnColor");
-var btnSignin = document.querySelector("#btnSignin");
-var btnSignup = document.querySelector("#btnSignup");
+
 
 document.querySelector('#btnSignin').addEventListener('click', () => {
     document.getElementById("signup").style.display = "none";

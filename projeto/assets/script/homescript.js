@@ -11,7 +11,7 @@ Window.onscroll =() => {
     navlist.classList.remove('open');
 }
 
-/*-- NavBar button--*/ 
+/* NavBar button */ 
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
 }
