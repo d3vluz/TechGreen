@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+:root{
+    --cor-bg: #f2f2f2; /* Default Background */
+    --cor-prata: #DFDFE2; /* Contraste pro branco */
+    --cor-texto: #181818; /* Cor do texto */
+    
+    --cor-um: #234930;
+    --cor-dois: #366D4F;
+    --cor-tres: #A7C4B5;
+    --cor-quatro: #D6F4D2;
+    --cor-cinco: #FFD7C2;
+
+    --h1-font: 4.0rem;
+    --h2-font: 3.0rem;
+    --p-font: 1rem;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-quatro);
+    opacity: 1.2;
+}
+
+form{
+    position: relative;
+
+    &#signup{
+        display: none;
+    }
+}
+
+& btnSignin{
+    color: var(--cor-bg);
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--cor-dois);
+    padding: 1rem;
+
+    & img{
+        width: 31rem;
+    }
+}
+
+/* Botões Login/Cadastro */
+.form-header{
+    margin-top: 10px ;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid var(--cor-dois);
+    box-shadow: 0 0 7px 0 var(--cor-um);
+
+    & > button{
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        position: relative;
+        padding: 10px 29px;
+    }
+
+    & .btnColor{
+        position: absolute;
+        width: 108px;
+        height: 100%;
+        background: linear-gradient(to right, var(--cor-tres), var(--cor-quatro));
+        border-radius: 30px;
+        left: 0px;
+        cursor: pointer;
+        transition: all .6s;
+    }
+}
+
+/* Seção Login */
+form#signin{
+    transition: .5s;
+    margin-top: 90px;
+
+    & > button{
+        background: var(--cor-um);
+        color: var(--cor-bg);
+        border-radius: 30px;
+        width: 100%;
+        border: 2px solid var(--cor-dois);
+        outline: none;
+        padding: 8px 0 8px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 40px;
+        transition: all .6s;
+
+        &:hover{
+            background-color: var(--cor-bg);
+            color: var(--cor-dois);
+            font-weight: 800;
+            scale: 1.03;
+        }
+    }
+    
+    & > input{
+        border: none;
+        margin-top: 30px;
+        border-radius: 60px;
+        padding: 8px 0 8px 35px;
+        outline: none;
+        width: 100%;
+    }
+
+    & .saudacao{
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-top: 30px;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        text-transform: uppercase;
+        top: -100px;
+    
+        & > span {
+            color: var(--cor-um);
+            opacity: 0.7;
+        }
+    }
+}
+
+i{
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    color: var(--cor-um);
+}
+
+.iEmail{
+    top: 28px;
+}
+
+.iSenha{
+    top: 94px;
+}
+
+.checkbox{
+    margin: 20px 0 0 5px;
+    width: 80%;
+    font-size: 16px;
+
+    & span{
+        vertical-align: middle;
+    }
+}
+
+/* Seção Cadastro */
+.box-form{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--cor-bg);
+    padding: 3rem;
+}
+
+.input-informacao{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+#signup .input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+    & input{
+        margin: 0.4rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #001c07;
+
+        &:hover{
+            background-color: #e1e1e1e1 ;
+        }
+
+        &:focus-visible{
+            outline: 1px solid #099209;
+        }
+    }
+
+    & label{
+       font-size: 0.8rem;
+       font-weight: 600;
+       color: black; 
+
+       &::placeholder{
+        color: #000000be;
+       }
+    }
+}
+
+.rules-group{
+    font-size: 14px;
+    color: #949494e1;
+    font-weight: 500;
+
+    & a{
+        color: #949494e1;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            color: var(--cor-tres);
+        }
+    }
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid var(--cor-dois);
+    background-color: var(--cor-um);
+    color: var(--cor-bg);
+    padding: 0.65rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .6s;
+
+    &:hover{
+        opacity: 0.9;
+        background-color: #fafafa;
+        color: #00001c;
+        transition: all .6s;
+        color: var(--cor-dois);
+        font-weight: 800;
+        scale: 1.03;
+    }
+
+    & a{
+        font-size: 0.95rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #fafafa;
+    }
+}
+
+@media screen and (max-width:1330px){
+    .form-image{
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+        height: auto;
+    }
+
+    .box-form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1050px){
+    .container{
+        width: 80%;
+        height: auto;
+    }
+
+    .input-informacao{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        /* max-height: 18rem; */
+        padding: 0 3rem 0 10px;
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width:1050px){
+    .container{
+        width: 70%;
+        height: auto;
+    }
+
+    .input-informacao{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 18rem;
+        padding: 0 3rem 0 10px;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Terminar aqui */
+@media screen and (max-width: 670px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .saudacao {
+        font-size: 1.1rem !important;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .saudacao {
+        font-size: 0.8rem !important;
+        margin: 0 15%;
+    }
+}
