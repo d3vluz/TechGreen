@@ -181,7 +181,6 @@ header{
 
 .about-text{
     padding-top: 60px;
-    opacity: 0;
     & h3{
         font-size: var(--h1-font);
         font-weight: 700;
