@@ -31,7 +31,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0ce9704d;
+    background: var(--cor-quatro);
+    opacity: 1.2;
 }
 
 form{
@@ -42,10 +43,15 @@ form{
     }
 }
 
+& btnSignin{
+    color: var(--cor-bg);
+}
+
 .container{
     width: 80%;
     height: 80vh;
     display: flex;
+    border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -54,7 +60,8 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #D6F4D2;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--cor-dois);
     padding: 1rem;
 
     & img{
@@ -67,6 +74,7 @@ form{
     margin-top: 10px ;
     position: relative;
     border-radius: 30px;
+    border: 1px solid var(--cor-dois);
     box-shadow: 0 0 7px 0 var(--cor-um);
 
     & > button{
@@ -81,7 +89,7 @@ form{
         position: absolute;
         width: 108px;
         height: 100%;
-        background: linear-gradient(to left, #D6F4D2,#08c256);
+        background: linear-gradient(to right, var(--cor-tres), var(--cor-quatro));
         border-radius: 30px;
         left: 0px;
         cursor: pointer;
@@ -99,12 +107,20 @@ form#signin{
         color: var(--cor-bg);
         border-radius: 30px;
         width: 100%;
-        border: none;
+        border: 2px solid var(--cor-dois);
         outline: none;
         padding: 8px 0 8px 15px;
         font-size: 15px;
         cursor: pointer;
         margin-top: 40px;
+        transition: all .6s;
+
+        &:hover{
+            background-color: var(--cor-bg);
+            color: var(--cor-dois);
+            font-weight: 800;
+            scale: 1.03;
+        }
     }
     
     & > input{
@@ -127,7 +143,8 @@ form#signin{
         top: -100px;
     
         & > span {
-            color: var(--cor-dois);
+            color: var(--cor-um);
+            opacity: 0.7;
         }
     }
 }
@@ -136,6 +153,7 @@ i{
     position: absolute;
     left: 0;
     padding: 10px 10px;
+    color: var(--cor-um);
 }
 
 .iEmail{
@@ -157,13 +175,14 @@ i{
 }
 
 /* Seção Cadastro */
-.box-form {
+.box-form{
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    border-radius: 0 10px 10px 0;
     background-color: var(--cor-bg);
     padding: 3rem;
 }
@@ -185,7 +204,7 @@ i{
         padding: 0.8rem 1.2rem;
         border: none;
         border-radius: 10px;
-        box-shadow: 1px 1px 6px #00001c;
+        box-shadow: 1px 1px 6px #001c07;
 
         &:hover{
             background-color: #e1e1e1e1 ;
@@ -215,9 +234,10 @@ i{
     & a{
         color: #949494e1;
         cursor: pointer;
+        transition: .3s;
 
         &:hover{
-            color: var(--theme-color);
+            color: var(--cor-tres);
         }
     }
 }
@@ -225,8 +245,9 @@ i{
 .continue-button button{
     width: 100%;
     margin-top: 20px;
-    border: 2px solid transparent;
-    background-color: var(--cor-dois);
+    border: 2px solid var(--cor-dois);
+    background-color: var(--cor-um);
+    color: var(--cor-bg);
     padding: 0.65rem;
     border-radius: 5px;
     cursor: pointer;
@@ -234,14 +255,12 @@ i{
 
     &:hover{
         opacity: 0.9;
-        border: 2px solid var(--theme-color);
         background-color: #fafafa;
         color: #00001c;
         transition: all .6s;
-
-        & a{
-            color: var(--theme-color);
-        }
+        color: var(--cor-dois);
+        font-weight: 800;
+        scale: 1.03;
     }
 
     & a{
