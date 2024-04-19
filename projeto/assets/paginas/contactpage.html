@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Estilo -->
-    <link rel="stylesheet" href="../estilos/main-style.css">
+    <link rel="stylesheet" href="../estilos/contact-style.css">
     <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
     <!-- Fim Estilo -->
     <!-- Box Icons -->
@@ -16,16 +16,18 @@
     <!-- Fim Remix Icons -->
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <a href="#" class="logo">Tech<span>Green</span></a>
 
         <nav class="navlist">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="shoppage.html">Comprar</a></li>
+            <li><a href="/projeto/index.html">Home</a></li>
+            <li><a href="/projeto/assets/paginas/shoppage.html">Comprar</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="blogpage.html">Blog</a></li>
-            <li><a href="contactpage.html" class="ativo">Contato</a></li>
+            <li><a href="/projeto/assets/paginas/blogpage.html">Blog</a></li>
+            <li><a href="/projeto/assets/paginas/contactpage.html" class="ativo">Contato</a></li>
         </nav>
+        
 
         <div class="nav-right">
             <a href="#"><i class="ri-search-line"></i></a>
@@ -33,6 +35,17 @@
             <a href="#"><i class="ri-user-line"></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div> <!-- Fim nav-right -->
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/projeto/index.html">Home</a>
+            <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
+            <a href="#">Sobre</a></li>
+            <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
+            <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+        </div> <!--sidebar-->
+
+        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
     </header>
     <main>
 
@@ -156,23 +169,23 @@
             </div> <!-- Fim pessoas -->
         </section>
     </main>
+    <!-- FOOTER -->
     <footer>
-            <!-- FOOTER -->
         <section class="footer">
             <div class="footer-box">
-                <h3>Empresa</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
+                <h3>Sobre</h3>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Entrega</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
-                <h3>FAQ</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
+                <h3>Conta</h3>
+                <a href="#">Entrar</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Cadastrar</a>
+                <a href="#">Carrinho</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
@@ -198,12 +211,9 @@
             <div class="end-text">
                 <p>&copy; CopyRight 2024 By <a href="https://github.com/d3vluz/TechGreen">Techgreen</a></p>
             </div> <!-- Fim end-text -->
-
-            <div class="payment">
-                <img src="../imagens/payment.png" alt="Formas de pagamento aceitas">
-            </div> <!-- Fim payment -->
         </div> <!-- Fim copyright -->
     </footer>
     
+    <script src="/projeto/script.js"></script>
 </body>
 </html>
