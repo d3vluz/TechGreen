@@ -1,4 +1,4 @@
-var formSignin = document.querySelector("#signin");
+let formSignin = document.querySelector("#signin");
 var formSignup = document.querySelector("#signup");
 var btnColor = document.querySelector(".btnColor");
 
