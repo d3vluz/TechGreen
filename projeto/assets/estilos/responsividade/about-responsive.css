@@ -13,6 +13,29 @@
     }
 }
 
+/*SERVIÇOS*/
+
+@media screen and (max-width: 768px) {
+    .box-service {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .service-template-image {
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box-service {
+        gap: 1rem;
+    }
+
+    .service-template-image {
+        max-height: 100px;
+    }
+}
+
+
 /* FOOTER */
 @media screen and (max-width: 768px) {
     .footer {

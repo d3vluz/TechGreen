@@ -276,23 +276,27 @@ header{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     gap: 2rem 5rem;
+    justify-content: center;
 }
 
 .service-template {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 2rem;
     padding: 1rem;
     text-align: center;
 }
 
-
+.service-template-image {
+    width: 30%;
+    max-height: 200px;
+}
 
 .service-template-image img {
     background-color: #ddd;
-    width: 100%; 
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
