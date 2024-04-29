@@ -15,12 +15,20 @@ app.use(bodyParser.urlencoded({
       extended: true
 }))
 
-mongoose.connect("mongodb://localhost:27017/myDB");
-
+_promise = mongoose.connect("mongodb://localhost:27017/myDB");
 var db = mongoose.connection;
 
 db.on("error", () => console.log("Erro em conectar ao banco de dados"))
-db.once("open", () => console.log("Cusseco em conectar ao banco de dados"))
+//db.once("open", () => console.log("Susseco em conectar ao banco de dados"))
+db.once("open", () => {
+      db.collection('users').find({}).toArray()
+      .then((result) => {
+          console.log("Documentos encontrados na coleção 'users':", result);
+      })
+      .catch((error) => {
+          console.error("Erro ao buscar documentos:", error);
+      });
+})
 
 app.post("/signup", (req, res) => {
       var name = req.body.nome
@@ -36,7 +44,7 @@ app.post("/signup", (req, res) => {
             "password": password
       }
 
-      db.collection('users').insertOne(dataobj, (err, collection) => {
+      db.collection('users').insertOne(dataobj, (err) => {
             if (err) {
                   throw err;
             }
@@ -47,8 +55,9 @@ app.post("/signup", (req, res) => {
 })
 
 app.post("/signin", (req, res) => {
+      
       var email = req.body.email
-      var password = req.body.password
+      var password = req.body.senha
 
       dataobj = {
             "email": email,
@@ -59,14 +68,15 @@ app.post("/signin", (req, res) => {
             if (err) {
                   throw err;
             }
-            if (collection) {
+            if (collection) {   
                   console.log("Usuario encontrado")
                   return res.redirect('index.html')
             } else {
                   console.log("Usuario nao encontrado")
             }
       })
-})
+});
+
 app.get("/loginpage.html", (req, res) => {
       res.sendFile(__dirname + '/assets/paginas/loginpage.html');
       console.log("loginpage")
@@ -76,6 +86,7 @@ app.get("/index.html", (req, res) => {
       res.sendFile(__dirname + '/index.html');
       console.log("index")
 });
+
 //app.get("/home.css", (req, res) => {
 //      res.sendFile(__dirname + '/assets/estilos/home.css');
 //});
@@ -83,13 +94,11 @@ app.get("/index.html", (req, res) => {
 //      res.sendFile(__dirname + '/index.html');
 //});
 
-
 app.get("/", (req, res) => {
       res.set({
             "ALLow-access-ALLow-Origin": "*"
       })
       return res.redirect("loginpage.html");
-
 }).listen(3000)
 
 
