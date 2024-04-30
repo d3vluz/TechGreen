@@ -271,6 +271,13 @@ i{
     }
 }
 
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
 @media screen and (max-width:1330px){
     .form-image{
         display: none;
