@@ -26,21 +26,21 @@
                 <button id="btnSignup">Sign up</button>
             </div> <!-- Fim form-header -->
 
-            <form id="signin"  action="#" autocomplete="off" method="post">
+            <form id="signin"  action="signin" autocomplete="off" method="POST">
                 <p class="saudacao">Que bom te ver denovo,<br> estavamos com <span>saudades!</span></p>
-                    <input type="text" placeholder="E-mail" required>
+                    <input id="email" type="email" name="email" placeholder="E-mail" required>
                     <i class="ri-mail-fill iEmail"></i>
-                    <input type="password" placeholder="Senha" required>
+                    <input id="senha" type="password" name="senha" placeholder="Senha" required>
                     <i class="ri-lock-fill iSenha"></i>
 
                 <div class="checkbox">
                     <input type="checkbox">
                     <span> Manter-me conectado</span>
                 </div> <!-- Fim checkbox -->
-                <button type="submit">Entrar</button>
+                <button id = "submit" type="submit">Entrar</button>
             </form> <!-- Fim sing-in -->
 
-            <form id="signup"  action="#" autocomplete="off" method="post">
+            <form id="signup"  action="signup" autocomplete="off" method="POST">
                 <div class="input-informacao">
                     <div class="input-box">
                         <label for="nome">Nome: *</label>
