@@ -16,7 +16,7 @@ document.querySelector('#btnSignup').addEventListener('click', () => {
     btnColor.style.left = "110px";
     btnColor.style.background = "linear-gradient(to left, var(--cor-tres), var(--cor-quatro));";
 });
-function confPassword(password, confirm) {
+/*function confPassword(password, confirm) {
     if (password !== confirm) {
         const err = new Error('Senha diferente')
             err.input = 'confirmPassword'
@@ -62,4 +62,4 @@ form.addEventListener('submit', (ev) => {
         document.querySelector(`#${err.input}-error`).textContent = err.message
     }
 
-})
+})*/
