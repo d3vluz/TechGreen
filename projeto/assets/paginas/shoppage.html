@@ -23,8 +23,8 @@
 
         <nav class="navlist">
             <li><a href="../../index.html">Home</a></li>
-            <li><a href="shoppage.html" class="ativo">Comprar</a></li>
-            <li><a href="aboutpage.html">Sobre</a></li>
+            <li><a href="shoppage.html">Comprar</a></li>
+            <li><a href="aboutpage.html" class="ativo">Sobre</a></li>
             <li><a href="blogpage.html">Blog</a></li>
             <li><a href="contactpage.html">Contato</a></li>
         </nav>
@@ -35,7 +35,20 @@
             <a href="#"><i class="ri-user-line"></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div> <!-- Fim nav-right -->
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/projeto/index.html">Perfil</a>
+            <a href="/projeto/index.html">Home</a>
+            <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
+            <a href="/projeto/assets/paginas/aboutpage.html">Sobre</a></li>
+            <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
+            <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+        </div> <!--sidebar-->
+
+        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton--> 
     </header>
+
     <main>
         <!-- Talvez adicionar um banner -->
         <section class="n-produtos">
@@ -47,10 +60,10 @@
                     <!-- n1 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/imagens/NoBreak.jpg" alt="" srcset="">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
+                    <h3>Nobreak</h3> <!-- NOME PRODUTO -->
                     
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -78,10 +91,10 @@
                     <!-- n2 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/Cabo-USB-A_B-para-Impressora-com-Filtro-5-Metros-5022.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
+                    <h3>Cabo USB</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -109,10 +122,10 @@
                     <!-- n3 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/placa-de-circuito-impresso-ilhada-240-furos-dupla-face-3x7cm.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
+                    <h3>Placa de Circuito Impresso</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -140,10 +153,10 @@
                     <!-- n4 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/Teclado.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->
+                    <h3>Teclados</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -170,10 +183,10 @@
                     <!-- n5 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/m171-mouse-top-view-grey.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Social Verde</h3> <!-- NOME PRODUTO -->
+                    <h3>Mouse</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -200,10 +213,10 @@
                     <!-- n6 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/Cabo-For-a-De-Energia-Dex-Para-Fonte-De-Pc-E-Monitor-1-50-Metros_1669228737_gg.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Short Jeans</h3> <!-- NOME PRODUTO -->
+                    <h3>Cabo de Alimentação de Energia</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -230,10 +243,10 @@
                     <!-- n7 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/Placa_De_Video.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Camisa Courage</h3> <!-- NOME PRODUTO -->
+                    <h3>Placa de video</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -260,10 +273,10 @@
                     <!-- n8 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="assets/img_produt/RAM.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
-                    <h3>Calça Jeans Preta</h3> <!-- NOME PRODUTO -->
+                    <h3>Memória RAM</h3> <!-- NOME PRODUTO -->
 
                     <div class="stars">
                         <a href="#"><i class="ri-star-fill"></i></a>
@@ -299,7 +312,7 @@
         <section class="footer">
             <div class="footer-box">
                 <h3>Sobre</h3>
-                <a href="#">Sobre Nós</a>
+                <a href="/projeto/assets/paginas/aboutpage.html">Sobre Nós</a>
                 <a href="#">Entrega</a>
                 <a href="#">Privacidade</a>
                 <a href="#">Termos</a>
@@ -308,17 +321,17 @@
             <div class="footer-box">
                 <h3>Conta</h3>
                 <a href="#">Entrar</a>
-                <a href="#">Ajuda</a>
                 <a href="#">Cadastrar</a>
                 <a href="#">Carrinho</a>
+                <a href="#">Ajuda</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
                 <h3>Resources</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
+                <a href="/projeto/index.html">Início</a>
+                <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
+                <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+                <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
@@ -336,10 +349,6 @@
             <div class="end-text">
                 <p>&copy; CopyRight 2024 By <a href="https://github.com/d3vluz/TechGreen">Techgreen</a></p>
             </div> <!-- Fim end-text -->
-            
-            <div class="payment">
-                <img src="../imagens/payment.png" alt="Formas de pagamento aceitas">
-            </div> <!-- payment -->
         </div> <!-- Fim copyright -->
     </footer>
     

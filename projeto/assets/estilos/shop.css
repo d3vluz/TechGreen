@@ -53,6 +53,7 @@ header{
     align-items: center;
     justify-content: space-between;
     transition: all .6s;
+    background-color: white;
 }
 
 .logo{
@@ -66,39 +67,39 @@ header{
     }
 }
 
-.navlist{
-    display:flex;
-
-
-    & li {
-        position: relative;
-
-        & a{
-            display: inline-block;
-            margin: 0 20px;
-            font-size: var(--p-font);
-            font-weight: 500;
-            color: var(--text-color);
-            transition: all .4s;
-    
-            &:hover,
-            &.ativo{
-                color: var(--theme-color);
-    
-                &::after{
-                    content: "";
-                    width: 30%;
-                    height: 2px;
-                    background: var(--theme-color);
-                    position: absolute;
-                    bottom: -2px;
-                    left: 20px;
-                }
-            }
-        }
-    }
+.navlist {
+    display: flex;
+   
 }
 
+.navlist li {
+    position: relative;
+}
+
+.navlist li a {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all .4s;
+}
+
+.navlist li a:hover,
+.navlist li a.ativo {
+    color: var(--theme-color);
+}
+
+.navlist li a:hover::after,
+.navlist li a.ativo::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--theme-color);
+    position: absolute;
+    bottom: -2px;
+    left: 20px;
+}
 .nav-right{
     display: flex;
     align-items: center;
@@ -238,5 +239,20 @@ header{
             text-decoration: underline;
             color: #099209;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 18px 10px;
+    }
+    .navlist {
+        display: none;
+    }
+    .nav-right {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
     }
 }
