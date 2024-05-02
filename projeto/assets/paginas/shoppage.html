@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Estilo -->
-        <link rel="stylesheet" href="../estilos/shop.css">
-        <link rel="stylesheet" href="../estilos/responsividade/shop-responsive.css"> <!-- Responsivo -->
-        <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
-        <!-- Fim Estilo -->
-        <!-- Box Icons -->
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        <!-- Fim Box Icons -->
-        <!-- Remix Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
-        <title>TechGreen</title>
-        <!-- Fim Remix Icons -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../estilos/shop.css">
+    <link rel="stylesheet" href="../estilos/responsividade/shop-responsive.css"> <!-- RESPONSIVO -->
+    <link rel="shortcut icon" href="../assets/imagens/favicon.png" type="image/x-icon">
+    <!-- Fim Estilos -->
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Fim Box Icons -->
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+    <!-- Fim Remix Icons -->
+    <title>TechGreen</title>
+</head>
 <body>
     <!-- HEADER -->
     <header>
@@ -35,9 +35,21 @@
             <a href="#"><i class="ri-user-line"></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div> <!-- Fim nav-right -->
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/projeto/index.html">Home</a>
+            <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
+            <a href="/projeto/assets/paginas/aboutpage.html">Sobre</a></li>
+            <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
+            <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+        </div> <!--sidebar-->
+
+        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
     </header>
+
     <main>
-        <!-- Talvez adicionar um banner -->
+        <!-- PRODUTOS -->
         <section class="n-produtos">
             <div class="center-text">
                 <h2>Coleção</h2>
@@ -47,7 +59,7 @@
                     <!-- n1 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="../imagens/1.png" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
@@ -78,7 +90,7 @@
                     <!-- n2 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="../assets/imagens/2" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
@@ -109,7 +121,7 @@
                     <!-- n3 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="../assets/imagens/2" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
@@ -140,7 +152,7 @@
                     <!-- n4 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="../assets/imagens/2" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->
@@ -170,7 +182,7 @@
                     <!-- n5 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="assets/imagens/" alt="#">
+                        <img src="../assets/imagens/1" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Social Verde</h3> <!-- NOME PRODUTO -->
@@ -293,51 +305,11 @@
                 <a href="#" class="btn2">Ver Todos</a>
             </div> <!-- Fim n-btn -->
         </section> <!-- Fim n-produtos -->
-
     </main>
-    <!-- FOOTER -->
+
     <footer>
-        <section class="footer">
-            <div class="footer-box">
-                <h3>Sobre</h3>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Entrega</a>
-                <a href="#">Privacidade</a>
-                <a href="#">Termos</a>
-            </div> <!-- Fim footer-box -->
 
-            <div class="footer-box">
-                <h3>Conta</h3>
-                <a href="#">Entrar</a>
-                <a href="#">Ajuda</a>
-                <a href="#">Cadastrar</a>
-                <a href="#">Carrinho</a>
-            </div> <!-- Fim footer-box -->
-
-            <div class="footer-box">
-                <h3>Resources</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-            </div> <!-- Fim footer-box -->
-
-            <div class="footer-box">
-                <h3>Social</h3>
-                <div class="social">
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                </div> <!-- Fim social -->
-            </div> <!-- Fim footer-box -->
-        </section> <!-- Fim footer -->
-
-        <!-- COPYRIGHT -->
-        <div class="copyright">
-            <div class="end-text">
-                <p>&copy; CopyRight 2024 By <a href="https://github.com/d3vluz/TechGreen">Techgreen</a></p>
-            </div> <!-- Fim end-text -->
-        </div> <!-- Fim copyright -->
     </footer>
+    
 </body>
 </html>
