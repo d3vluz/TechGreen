@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema({
 
 userSchema.statics.createUser = async function (userData) {
     const { nome, sobrenome, email, senha, celular } = userData;
-    console.log(userData)
     const hashedPassword = await bcrypt.hash(senha, 10);
     return this.create({
         nome,
@@ -46,7 +45,6 @@ userSchema.statics.createUser = async function (userData) {
 
 userSchema.statics.loginUser = async function (userData) {
     const { email } = userData;
-    console.log(userData)
     return this.findOne({ email });
 };
 
