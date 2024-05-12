@@ -1,4 +1,4 @@
-# TechGreen :seedling: - E-Commerce de Energia Verde
+# TechGreen :seedling: - E-Commerce de Energia Verde (EM DESENVOLVIMENTO)
 ***
 
 Bem-vindo ao repositório do projeto TechGreen!, um projeto inovador **desenvolvido em grupo** com o objetivo de criar um __*site web*__ dedicado à venda de tecnologia renovável.
