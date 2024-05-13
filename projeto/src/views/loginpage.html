@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/stylesheets/menu-login.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <!-- Fim Estilos -->
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+    <!-- Fim Remix Icons -->
+    <title>TechGreen</title>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="../imagens/teste2.png" alt=""> <!-- Imagem login -->
+        </div> <!-- Fim form-image -->
+
+        <div class="box-form"> <!-- container -->
+            <div class="form-header"> <!-- buttonsForm -->
+                <div class="btnColor"></div>
+                <button id="btnSignin">Sign in</button>
+                <button id="btnSignup">Sign up</button>
+            </div> <!-- Fim form-header -->
+
+            <form id="signin"  action="signin" autocomplete="off" method="POST">
+                <p class="saudacao">Que bom te ver denovo,<br> estavamos com <span>saudades!</span></p>
+                    <input id="emailSignin" type="email" name="email" placeholder="E-mail" required>
+                    <i class="ri-mail-fill iEmail"></i>
+                    <input id="senhaSignin" type="password" name="senha" placeholder="Senha" required>
+                    <i class="ri-lock-fill iSenha"></i>
+
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span> Manter-me conectado</span>
+                </div> <!-- Fim checkbox -->
+                <button id="submitSignin" type="submit">Entrar</button>
+            </form> <!-- Fim sing-in -->
+
+            <form id="signup"  action="signup" autocomplete="off" method="POST">
+                <div class="input-informacao">
+                    <div class="input-box">
+                        <label for="nome">Nome: *</label>
+                        <input id="nomeSignup" type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="sobrenome">Sobrenome: *</label>
+                        <input id="sobrenomeSignup" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="email">Email: *</label>
+                        <input id="emailSignup" type="email" name="email" placeholder="Digite seu email" required>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="celular">Celular: </label>
+                        <input id="celularSignup" type="tel" name="celular" placeholder="(xx) xxxx-xxxx">
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="senha">Senha: *</label>
+                        <input type="password" id="senhaSignup" name="senha" placeholder="Digite sua senha" required />
+                         <div class="requirement-list">
+                            <li>
+                                <i class="fa-solid fa-circle"></i>
+                                <span id="length">Pelo menos 8 caracteres</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle"></i>
+                                <span id="uppercase">Pelo menos uma letra maiúscula</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle"></i>
+                                <span id="lowercase">Pelo menos uma letra minúscula</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle"></i>
+                                <span id="number">Pelo menos um número</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle"></i>
+                                <span id="special">Pelo menos um caractere especial</span>
+                            </li>
+                         </div>
+                    </div> <!--- Fim Input-box -->
+
+                    <div class="input-box">
+                        <label for="confirmarsenha">Confirme sua senha: *</label>
+                        <input id="confirmarsenhaSignup" type="password" name="confirmarsenha" placeholder="Digite sua senha" required>
+                        <span id="confirmPassword-error"></span>
+                    </div> <!--- Fim Input-box -->
+                </div> <!-- Fim input-informacao -->
+
+
+                <div class="rules-group">
+                    <div class="rules-input">
+                        <input type="radio" id="regras" name="regras" required>
+                        <label for="regras"> Ao clicar você afirmar concordar com os <a href="#">termos do site.</a></label>
+                    </div> <!-- Fim rules-input -->
+
+                    <div class="rules-input">
+                        <input type="radio" id="notificacao" name="notificacao">
+                        <label for="notificacao"> Ao clicar você concorda em receber novidades e pop-ups.</label>
+                    </div> <!-- Fim rules-input -->
+                </div> <!-- Fim rules-group -->
+
+                <div class="continue-button">
+                    <button>Continuar</button>
+                </div> <!-- Fim continue-button -->
+            </form>
+        </div> <!-- Fim box-form -->
+    </div> <!-- Fim container -->
+
+    <script src="/javascripts/loginscript.js"></script>
+</body>
+</html>
