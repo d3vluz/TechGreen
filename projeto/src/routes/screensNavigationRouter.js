@@ -24,5 +24,11 @@ router.get('/blogpage', function(req, res) {
 router.get('/contactpage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/contactpage.html'));
 });
+router.get('/cartpage', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/cartpage.html'));
+});
+router.get('/itempage', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/itempage.html'));
+});
 
 module.exports = router;
