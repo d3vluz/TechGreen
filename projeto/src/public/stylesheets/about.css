@@ -171,7 +171,7 @@ header{
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url(../imagens/bg.jpg);
+    background: url(/imagens/bg.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -217,7 +217,6 @@ header{
 
 .main-box-text {
     min-width: 460px;
-
     & h2 {
         font-size: var(--h2-font);
         color: var(--text-color); 
@@ -250,59 +249,34 @@ header{
 
 
  /*NOSSOS SERVIÇOS*/
-
-.box-low{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+ .box-low {
+    text-align: center; 
 }
 
-.low-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    & h2 {
-        font-size: var(--h2-font);
-        color: var(--text-color);
-    }
+.box-low .low-content h2 {
+    margin-bottom: 20px;
 }
 
-.box-service {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    gap: 2rem 5rem;
-    justify-content: center;
+ .box-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
 }
 
 .service-template {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.service-template-image {
-    width: 30%;
-    max-height: 200px;
+.service-template-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.service-template-image img {
-    background-color: #ddd;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
-.service-template-text {
-    text-align: start;
-}
 
 /* FOOTER */
 .footer {
@@ -396,6 +370,18 @@ header{
 
     .main-box-text {
         min-width: auto;
+        text-align: center;
+        & h2 {
+            font-size: 2.5rem;
+            color: var(--text-color); 
+        }
+        
+        & p {
+            font-size: var(--p-font);
+            color: var(--text-color); 
+            line-height: 33px;
+            margin-top: 35px;
+        }
     }
 
     .main-box-image img {

@@ -6,7 +6,7 @@
     <!-- Estilo -->
     <link rel="stylesheet" href="/stylesheets/contact.css">
     <link rel="stylesheet" href="/stylesheets/responsividade/contact-responsive.css"> <!-- Responsivo -->
-    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
     <!-- Fim Estilo -->
     <!-- Box Icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -22,28 +22,28 @@
         <a href="#" class="logo">Tech<span>Green</span></a>
 
         <nav class="navlist">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="shoppage.html">Comprar</a></li>
-            <li><a href="aboutpage.html">Sobre</a></li>
-            <li><a href="blogpage.html">Blog</a></li>
-            <li><a href="contactpage.html" class="ativo">Contato</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/shoppage">Comprar</a></li>
+            <li><a href="/aboutpage">Sobre</a></li>
+            <li><a href="/blogpage">Blog</a></li>
+            <li><a href="/contactpage" class="ativo">Contato</a></li>
         </nav>
-        
 
         <div class="nav-right">
             <a href="#"><i class="ri-search-line"></i></a>
             <a href="#"><i class="ri-shopping-cart-2-line"></i></a>
-            <a href="#"><i class="ri-user-line"></i></a>
+            <a href="/loginpage"><i class="ri-user-line"></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div> <!-- Fim nav-right -->
 
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="/projeto/index.html">Home</a>
-            <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
-            <a href="#">Sobre</a></li>
-            <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
-            <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+            <a href="/perfil">Perfil</a>
+            <a href="/home">Home</a>
+            <a href="/shoppage">Comprar</a>
+            <a href="/aboutpage">Sobre</a></li>
+            <a href="/blogpage">Blog</a>
+            <a href="/contactpage">Contato</a>
         </div> <!--sidebar-->
 
         <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
@@ -90,84 +90,15 @@
         <!-- Section Contato -->
         <section class="form-contato">
             <!-- Formulário -->
-            <form action="" autocomplete="off" method="post">
+            <form id="send_email" action="send_email" autocomplete="off" method="post">
                 <h6>Deixe uma mensagem</h6>
                 <h2>Nós amamos ouvir vocês</h2>
-                <input type="text" placeholder="Seu Nome">
-                <input type="text" placeholder="Seu E-mail">
-                <input type="text" placeholder="Insira seu contato">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Coloque sua mensagem..."></textarea>
-                <button><p>Enviar</p></button>
+                <input type="" name="name" id="name" placeholder="Seu Nome">
+                <input type="" name="email" id="email" placeholder="Seu E-mail">
+                <input type="" name="contact" id="contact" placeholder="Insira seu contato">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Coloque sua mensagem..."></textarea>
+                <button type="submit"><p>Enviar</p></button>
             </form>
-
-            <!-- Equipe -->
-            <div class="pessoas">
-                <!-- Pessoa n1 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n2 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- pessoa n3 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n4 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n5 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-            </div> <!-- Fim pessoas -->
         </section>
     </main>
     <!-- FOOTER -->
@@ -175,7 +106,7 @@
         <section class="footer">
             <div class="footer-box">
                 <h3>Sobre</h3>
-                <a href="#">Sobre Nós</a>
+                <a href="/aboutpage">Sobre Nós</a>
                 <a href="#">Entrega</a>
                 <a href="#">Privacidade</a>
                 <a href="#">Termos</a>
@@ -183,18 +114,18 @@
 
             <div class="footer-box">
                 <h3>Conta</h3>
-                <a href="#">Entrar</a>
-                <a href="#">Ajuda</a>
-                <a href="#">Cadastrar</a>
+                <a href="/perfil">Entrar</a>
+                <a href="/loginpage">Cadastrar</a>
                 <a href="#">Carrinho</a>
+                <a href="#">Ajuda</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
                 <h3>Resources</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
+                <a href="/home">Início</a>
+                <a href="/blogpage">Blog</a>
+                <a href="/contactpage">Contato</a>
+                <a href="/shoppage">Comprar</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
@@ -215,6 +146,6 @@
         </div> <!-- Fim copyright -->
     </footer>
     
-    <script src="/projeto/script.js"></script>
+    <script src="/javascripts/contactscript.js"></script>
 </body>
 </html>
