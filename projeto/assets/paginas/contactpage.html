@@ -28,7 +28,6 @@
             <li><a href="blogpage.html">Blog</a></li>
             <li><a href="contactpage.html" class="ativo">Contato</a></li>
         </nav>
-        
 
         <div class="nav-right">
             <a href="#"><i class="ri-search-line"></i></a>
@@ -39,14 +38,15 @@
 
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/projeto/index.html">Perfil</a>
             <a href="/projeto/index.html">Home</a>
             <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
-            <a href="#">Sobre</a></li>
+            <a href="/projeto/assets/paginas/aboutpage.html">Sobre</a></li>
             <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
             <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
         </div> <!--sidebar-->
 
-        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
+        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton--> 
     </header>
     <main>
 
@@ -90,84 +90,15 @@
         <!-- Section Contato -->
         <section class="form-contato">
             <!-- Formulário -->
-            <form action="" autocomplete="off" method="post">
+            <form action="/send_email" autocomplete="off" method="post">
                 <h6>Deixe uma mensagem</h6>
                 <h2>Nós amamos ouvir vocês</h2>
-                <input type="text" placeholder="Seu Nome">
-                <input type="text" placeholder="Seu E-mail">
-                <input type="text" placeholder="Insira seu contato">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Coloque sua mensagem..."></textarea>
-                <button><p>Enviar</p></button>
+                <input type="" name="name" id="name" placeholder="Seu Nome">
+                <input type="" name="email" id="email" placeholder="Seu E-mail">
+                <input type="" name="contact" id="contact" placeholder="Insira seu contato">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Coloque sua mensagem..."></textarea>
+                <button type="submit"><p>Enviar</p></button>
             </form>
-
-            <!-- Equipe -->
-            <div class="pessoas">
-                <!-- Pessoa n1 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n2 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- pessoa n3 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n4 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-                <!-- Pessoa n5 -->
-                <div class="pessoa">
-                    <div class="pessoa-img">
-                        <img src="../imagens/foto-evandro.png" alt="Foto do autor">
-                    </div> <!-- Fim pessoa-img -->
-                    <div class="pessoa-dados">
-                        <p><span>Evandro Luz</span></p>
-                        <p>Ciência da Computação</p>
-                        <p>Número: (85) 98410-0819</p>
-                        <p>Email: devluz@hotmail.com</p>
-                    </div> <!-- Fim pessoa-dados -->
-                </div> <!-- Fim pessoa -->
-
-            </div> <!-- Fim pessoas -->
         </section>
     </main>
     <!-- FOOTER -->
@@ -175,7 +106,7 @@
         <section class="footer">
             <div class="footer-box">
                 <h3>Sobre</h3>
-                <a href="#">Sobre Nós</a>
+                <a href="/projeto/assets/paginas/aboutpage.html">Sobre Nós</a>
                 <a href="#">Entrega</a>
                 <a href="#">Privacidade</a>
                 <a href="#">Termos</a>
@@ -184,17 +115,17 @@
             <div class="footer-box">
                 <h3>Conta</h3>
                 <a href="#">Entrar</a>
-                <a href="#">Ajuda</a>
                 <a href="#">Cadastrar</a>
                 <a href="#">Carrinho</a>
+                <a href="#">Ajuda</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
                 <h3>Resources</h3>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
-                <a href="#">Lorem</a>
+                <a href="/projeto/index.html">Início</a>
+                <a href="/projeto/assets/paginas/blogpage.html">Blog</a>
+                <a href="/projeto/assets/paginas/contactpage.html">Contato</a>
+                <a href="/projeto/assets/paginas/shoppage.html">Comprar</a>
             </div> <!-- Fim footer-box -->
 
             <div class="footer-box">
@@ -215,6 +146,6 @@
         </div> <!-- Fim copyright -->
     </footer>
     
-    <script src="/projeto/script.js"></script>
+    <script src="/projeto/assets/script/contactscript.js"></script>
 </body>
 </html>
