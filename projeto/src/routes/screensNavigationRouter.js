@@ -9,6 +9,15 @@ router.get('/', function(req, res) {
 router.get('/home', function(req, res) {
     res.sendFile(path.join(__dirname, '../../index.html'));
 });
+router.get('/perfil', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/perfilPageAccoutDetail.html'));
+});
+router.get('/perfilOrders', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/perfilPageOrders.html'));
+});
+router.get('/perfilPassword', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/perfilPagePassword.html'));
+});
 router.get('/loginpage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/loginpage.html'))
 });
