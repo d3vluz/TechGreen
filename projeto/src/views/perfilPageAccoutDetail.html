@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/stylesheets/perfilPageAccoutDetailStyle.css">
+    <link rel="stylesheet" href="/stylesheets/responsividade/perfil-responsive.css"> <!-- Responsivo -->
+    <!-- Fim Estilos -->
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Fim Box Icons -->
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+    <title>TechGreen</title>
+    <!-- Fim Remix Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="/home" class="logo">Tech<span>Green</span></a>
+
+        <nav class="navlist">
+            <li><a href="/perfil" class="ativo">Perfil</a></li>
+            <li><a href="/perfilOrders">Pedidos</a></li>
+            <li><a href="/perfilPassword">Senha</a></li>
+        </nav>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/perfil">Perfil</a>
+            <a href="/perfilOrders">Pedidos</a>
+            <a href="/perfilPassword">Senha</a>
+        </div> <!--sidebar-->
+
+        <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
+    </header>
+
+    <footer>
+        <section class="footer">
+            <div class="footer-box">
+                <h3>Sobre</h3>
+                <a href="/aboutpage">Sobre Nós</a>
+                <a href="#">Entrega</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+            </div> <!-- Fim footer-box -->
+
+            <div class="footer-box">
+                <h3>Conta</h3>
+                <a href="/perfil">Entrar</a>
+                <a href="/loginpage">Cadastrar</a>
+                <a href="#">Carrinho</a>
+                <a href="#">Ajuda</a>
+            </div> <!-- Fim footer-box -->
+
+            <div class="footer-box">
+                <h3>Resources</h3>
+                <a href="/home">Início</a>
+                <a href="/blogpage">Blog</a>
+                <a href="/contactpage">Contato</a>
+                <a href="/shoppage">Comprar</a>
+            </div> <!-- Fim footer-box -->
+
+            <div class="footer-box">
+                <h3>Social</h3>
+                <div class="social">
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                </div> <!-- Fim social -->
+            </div> <!-- Fim footer-box -->
+        </section> <!-- Fim footer -->
+
+        <!-- COPYRIGHT -->
+        <div class="copyright">
+            <div class="end-text">
+                <p>&copy; CopyRight 2024 By <a href="https://github.com/d3vluz/TechGreen">Techgreen</a></p>
+            </div> <!-- Fim end-text -->
+        </div> <!-- Fim copyright -->
+    </footer>
+
+    <script src="/javascripts/perfil.js"></script>
+</body>
+</html>
