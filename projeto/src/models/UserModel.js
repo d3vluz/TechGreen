@@ -29,6 +29,8 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+
+    cart: [produtoSchema]
 });
 
 userSchema.statics.createUser = async function (userData) {
@@ -46,6 +48,11 @@ userSchema.statics.createUser = async function (userData) {
 userSchema.statics.loginUser = async function (userData) {
     const { email } = userData;
     return this.findOne({ email });
+};
+
+userSchema.methods.addProduto = function (produto) {
+    this.cart.push(produto);
+    return this.save();
 };
 
 module.exports = mongoose.model('User', userSchema);
