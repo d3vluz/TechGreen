@@ -1,4 +1,4 @@
-# TechGreen :seedling: - E-Commerce de Energia Verde (EM DESENVOLVIMENTO)
+# TechGreen :seedling: - E-Commerce de Energia Verde
 ***
 
 Bem-vindo ao repositório do projeto TechGreen!, um projeto inovador **desenvolvido em grupo** com o objetivo de criar um __*site web*__ dedicado à venda de tecnologia renovável.
@@ -30,8 +30,8 @@ Matrícula | Nome | Contribuição | Github | Email
 :---:|:---:|:---:|:---:|:---:
 2220294 | Evandro Luz | FullStack + Requisitos | [DevLuz](https://github.com/d3vluz) | devluz@hotmail.com
 2212378 | Rafael Silva | Fullstack + DB | [Rafilde](https://github.com/Rafilde) | rafasilva182003@gmail.com
-2224207 | Levi Tabosa | Backend | [Levi-tabosa](https://github.com/levi-tabosa) | silvacostaelevi@gmail.com
+2224207 | Levi Tabosa | Backend | [levi-tabosa](https://github.com/levi-tabosa) | silvacostaelevi@gmail.com
 2217693 | Hélio Nogueira | Backend + Figma | [Helionlf](https://github.com/helionlf) | heliofilhofhnlf@gmail.com
-2224186 | Natanael Freitas | Backend | [MrNatan2023](https://github.com/MrNatan2023) | nattanael.freitas2341@gmail.com
+2224186 | Natanael Freitas | Backend | [NatanFreitas](https://github.com/natanfreitas) | nattanael.freitas2341@gmail.com
 
 Agradecemos por contribuir para um futuro mais verde com o TechGreen! :leaves:
