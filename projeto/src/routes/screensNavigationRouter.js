@@ -5,7 +5,6 @@ const path = require('path');
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/loginpage.html'))
 });
-
 router.get('/home', function(req, res) {
     res.sendFile(path.join(__dirname, '../../index.html'));
 });
@@ -38,6 +37,12 @@ router.get('/cartpage', function(req, res) {
 });
 router.get('/itempage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/itempage.html'));
+});
+
+//place holder do form do produt
+router.get("/productpage", (req, res) => {
+    res.sendFile(path.join(__dirname,'../views/productpage.html'));
+    console.log("productpage");
 });
 
 module.exports = router;

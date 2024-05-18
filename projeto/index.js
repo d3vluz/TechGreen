@@ -7,8 +7,9 @@ const app = express();
 require('dotenv').config();
 
 const screensNavigationRouter = require('./src/routes/screensNavigationRouter');
-const loginRegisterRouter = require('./src/routes/loginRegisterRouter')
+const loginRegisterRouter = require('./src/routes/loginRegisterRouter');
 const contactRouter = require('./src/routes/contactRouter');
+const productRouter = require('./src/routes/productRouter');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,7 +20,7 @@ mongoose.connect("mongodb://localhost:27017/myDB");
 app.use('/', screensNavigationRouter);
 app.use('/', loginRegisterRouter);
 app.use('/', contactRouter);
-
+app.use('/', productRouter);
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000...');
