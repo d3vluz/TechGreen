@@ -12,3 +12,13 @@ exports.insertProduct = async (req, res) => {
         res.status(500).send("Erro interno do servidor ao cadastrar produto");
     }
 };
+
+exports.uploadProducts = async (req, res) => {
+      try {
+        const products = await Product.showProducts();
+        res.json(products);
+    } catch (error) {
+        console.error("Erro ao buscar produtos:", error);
+        res.status(500).json({ message: error.message });
+    }
+};

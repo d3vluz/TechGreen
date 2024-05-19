@@ -10,6 +10,7 @@ const screensNavigationRouter = require('./src/routes/screensNavigationRouter');
 const loginRegisterRouter = require('./src/routes/loginRegisterRouter');
 const contactRouter = require('./src/routes/contactRouter');
 const productRouter = require('./src/routes/productRouter');
+const userRouter = require('./src/routes/userRouter');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,6 +22,7 @@ app.use('/', screensNavigationRouter);
 app.use('/', loginRegisterRouter);
 app.use('/', contactRouter);
 app.use('/', productRouter);
+app.use('/', userRouter);
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000...');

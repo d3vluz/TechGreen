@@ -32,4 +32,12 @@ productSchema.statics.createProduct = async function (productData) {
       });
 };
 
+productSchema.statics.showProducts = async function() {
+      return this.find();
+}
+
+productSchema.methods.findProduct = async function(produtoId) {
+      Produto.findById(produtoId);
+  }
+
 module.exports = mongoose.model('Product', productSchema);

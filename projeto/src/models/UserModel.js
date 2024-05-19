@@ -30,7 +30,18 @@ const userSchema = new mongoose.Schema({
         default: Date.now
     },
 
-    cart: [produtoSchema]
+    cart: [
+        {
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Product'
+            },
+            quantity: {
+                type: Number,
+                default: 1
+            }
+        }
+    ]
 });
 
 userSchema.statics.createUser = async function (userData) {
@@ -48,11 +59,6 @@ userSchema.statics.createUser = async function (userData) {
 userSchema.statics.loginUser = async function (userData) {
     const { email } = userData;
     return this.findOne({ email });
-};
-
-userSchema.methods.addProduto = function (produto) {
-    this.cart.push(produto);
-    return this.save();
 };
 
 module.exports = mongoose.model('User', userSchema);
