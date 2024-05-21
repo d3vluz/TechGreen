@@ -19,7 +19,6 @@ O projeto será desenvolvido utilizando as seguintes tecnologias:
 - **Frontend:**
   - HTML5
   - CSS3
-  - Bootstrap (Responsividade).
 
 - **Backend:**
   - JavaScript
