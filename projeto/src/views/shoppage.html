@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Estilos -->
     <link rel="stylesheet" href="/stylesheets/shop.css">
@@ -48,266 +49,298 @@
 
         <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
     </header>
-
+    <!-- MAIN -->
     <main>
-        <!-- PRODUTOS -->
-        <section class="n-produtos">
-            <div class="center-text">
-                <h2>Coleção</h2>
-            </div> <!-- Fim center-text -->
-            <div class="n-conteudo">
+        <section class="banner">
+            <img src="" alt="">
+        </section> <!-- F banner -->
 
-                    <!-- n1 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/1.png" alt="#">
-                    </div> <!-- Fim row-img -->
+        <section class="shop-menu">
+            <div class="text-info">
+                <h6>Categorias</h6>
+                <div class="menu-type">
+                    <p>Eletrônicos</p>
+                    <ul>
+                        <li><a href="#">Tudo</a></li>
+                        <li><a href="#">Mouse</a></li>
+                        <li><a href="#">Teclado</a></li>
+                        <li><a href="#">Monitor</a></li>
+                        <li><a href="#">Microfone</a></li>
+                        <li><a href="#">Headset</a></li>
+                        <li><a href="#">Mousepad</a></li>
+                        <li><a href="#">Notebook</a></li>
+                    </ul>
+                </div> <!-- F Eletronicos -->
 
-                    <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
+                <div class="menu-type">
+                    <p>Energia Sustentável</p>
+                    <ul>
+                        <li><a href="#">Tudo</a></li>
+                        <li><a href="#">Painéis Solares</a></li>
+                        <li><a href="#">Power Bank</a></li>
+                        <li><a href="#">Luminárias</a></li>
+                        <li><a href="#">Ventiladores</a></li>
+                        <li><a href="#">Lanternas</a></li>
+                        <li><a href="#">Relógios</a></li>
+                        <li><a href="#">Câmeras</a></li>
+                    </ul>
+                </div> <!-- F Eletronicos -->
+                
+                <div class="menu-type">
+                    <p>Eletrodomésticos</p>
+                    <ul>
+                        <li><a href="#">Tudo</a></li>
+                        <li><a href="#">Lâmpada</a></li>
+                        <li><a href="#">Termostatos</a></li>
+                        <li><a href="#">Tomadas</a></li>
+                        <li><a href="#">Aspiradores</a></li>
+                        <li><a href="#">Geladeiras</a></li>
+                        <li><a href="#">Roteadores </a></li>
+                        <li><a href="#">Cafeteiras</a></li>
+                    </ul>
+                </div> <!-- F Eletronicos -->
+
+                <h6>Filtro por</h6>
+                <div class="menu-filter">
+                    <div class="brand-filter">
+                        <p>Marcas</p>
+                        <ul>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Dell</a></li>
+                            <li><a href="#">Ikea</a></li>
+                            <li><a href="#">HP</a></li>
+                        </ul>
+                    </div> <!-- F brand-filter -->
+                </div> <!-- F menu-filter -->
+            </div> <!-- F text-info -->
+
+            <div class="items-container">
+                <div class="top-bar">
+                    <div class="top-bar-total-products">
+                        <p><span>216</span> produtos encontrados</p>
+                    </div> <!-- F top-bar-total-products -->
                     
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
+                    <div class="top-bar-product-sorting">
+                        <p>Ordenado por:</p>
+                        <form action="#" method="get">
+                            <select name="select" id="sortByselect">
+                                <option value="value">Melhor Avaliado</option>
+                                <option value="value">Novidades</option>
+                                <option value="value">Preco: $$ - $</option>
+                                <option value="value">Preço: $ - $$</option>
+                            </select>
+                            <input type="submit" class="product-sort" value="">
+                        </form>
+                    </div> <!-- F top-bar-product-sorting -->
                     
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
+                </div> <!-- F top-bar-->
 
-                        <div class="row-right">
-                            <h6>R$ 79,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
+                <div class="n-produtos">
+                    <div class="n-conteudo">
+                            <!-- n1 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
+                            
+                            
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+        
+                                <div class="row-right">
+                                    <h6>R$ 79,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n2 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+        
+                                <div class="row-right">
+                                    <h6>R$ 109,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n3 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
 
-                    <!-- n2 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/2" alt="#">
-                    </div> <!-- Fim row-img -->
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+        
+                                <div class="row-right">
+                                    <h6>R$ 97,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n4 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+                                <div class="row-right">
+                                    <h6>R$ 69,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n5 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Social Verde</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+                                <div class="row-right">
+                                    <h6>R$ 114,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n6 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Short Jeans</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+                                <div class="row-right">
+                                    <h6>R$ 44,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n7 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Camisa Courage</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+                                <div class="row-right">
+                                    <h6>R$ 79,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+        
+                            <!-- n8 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Calça Jeans Preta</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+        
+                                <div class="row-right">
+                                    <h6>R$ 179,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
 
-                    <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-line"></i></a>
-                        <a href="#">4/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 109,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n3 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/2" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#">5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 97,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n4 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/2" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-                        <div class="row-right">
-                            <h6>R$ 69,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n5 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/1" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Social Verde</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-                        <div class="row-right">
-                            <h6>R$ 114,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n6 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Short Jeans</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-                        <div class="row-right">
-                            <h6>R$ 44,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n7 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camisa Courage</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-                        <div class="row-right">
-                            <h6>R$ 79,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n8 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/imagens/" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Calça Jeans Preta</h3> <!-- NOME PRODUTO -->
-
-                    <div class="stars">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#">4.5/5</a>
-                    </div> <!-- Fim stars -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 179,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-            </div> <!-- Fim n-content -->
-
-            <div class="n-btn">
-                <a href="#" class="btn2">Ver Todos</a>
-            </div> <!-- Fim n-btn -->
-        </section> <!-- Fim n-produtos -->
+                            <!-- n9 -->
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="img_button.jpg" alt="#">
+                            </div> <!-- Fim row-img -->
+        
+                            <h3>Calça Jeans Preta</h3> <!-- NOME PRODUTO -->
+        
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
+                                </div> <!-- Fim row-left -->
+        
+                                <div class="row-right">
+                                    <h6>R$ 179,99</h6>
+                                </div> <!-- Fim row-right -->
+                            </div> <!-- Fim row-in -->
+                        </div> <!-- Fim row -->
+                    </div> <!-- Fim n-content -->
+        
+                    <div class="n-btn">
+                        <a href="#" class="btn2">Ver Mais</a>
+                    </div> <!-- Fim n-btn -->
+                </div> <!-- Fim n-produtos -->
+            </div> <!-- F item-container -->
+        </section> <!-- F shop-menu-->
     </main>
-
     <!-- FOOTER -->
     <footer>
         <section class="footer">
