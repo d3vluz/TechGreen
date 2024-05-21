@@ -276,6 +276,10 @@ header{
                 font-size: 14px;
                 margin: 0 0 5px 10px;
                 color: #787878;
+
+                &:hover{
+                    color: #000000;
+                }
             }
         }
     }
