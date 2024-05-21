@@ -3,14 +3,10 @@ const router = express.Router();
 const path = require('path');
 
 router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views/loginpage.html'))
-});
-
-router.get('/home', function(req, res) {
     res.sendFile(path.join(__dirname, '../../index.html'));
 });
-router.get('/perfil', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views/perfilPageAccoutDetail.html'));
+router.get('/home', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../index.html'));
 });
 router.get('/perfilOrders', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/perfilPageOrders.html'));
