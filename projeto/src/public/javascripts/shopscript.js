@@ -15,7 +15,7 @@ window.addEventListener('resize', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
     const cartIcon = document.getElementById('cart-icon');
-    
+
     addToCartButtons.forEach(button => {
         button.addEventListener('click', addToCart);
     });
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const productName = productElement.getAttribute('data-name');
         const productPrice = productElement.getAttribute('data-price');
         const productImage = productElement.getAttribute('data-image');
-        
+
         const cartItem = {
             id: productId,
             name: productName,
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
+
         const existingItemIndex = cart.findIndex(item => item.id === cartItem.id);
         if (existingItemIndex > -1) {
             cart[existingItemIndex].quantity += 1;
