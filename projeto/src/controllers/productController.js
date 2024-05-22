@@ -39,24 +39,12 @@ exports.getProducts = async (req, res) => {
 
 //----------------
 
-exports.getBestSellers = async (req, res) => {
+exports.getBestSellersAndGetTopRatedProducts = async (req, res) => {
     try {
-        const products = await Product.getBestSellers();
-        if (products) {
-            res.render(path.join(__dirname, '../views/shoppageProductDetails.ejs'), { products });
-        } else {
-            return res.status(404).send("Produtos não encontrados.");
-        }
-    } catch (error) {
-        res.status(500).send("Erro interno do servidor");
-    }
-};
-
-exports.getTopRatedProducts = async (req, res) => {
-    try {
-        const products = await Product.getTopRatedProducts();
-        if (products) {
-            res.render(path.join(__dirname, '../views/shoppageProductDetails.ejs'), { products });
+        const topRatedProducts  = await Product.getTopRatedProducts();
+        const bestSellers  = await Product.getBestSellers();
+        if (bestSellers || topRatedProducts ) {
+            res.render(path.join(__dirname, '../../index.ejs'), { bestSellers, topRatedProducts  });
         } else {
             return res.status(404).send("Produtos não encontrados.");
         }
