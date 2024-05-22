@@ -20,9 +20,9 @@ router.get('/loginpage', function(req, res) {
 router.get('/aboutpage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/aboutpage.html'));
 });
-router.get('/shoppage', function(req, res) {
+/*router.get('/shoppage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/shoppage.html'));
-});
+});*/
 router.get('/blogpage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/blogpage.html'));
 });
@@ -34,6 +34,9 @@ router.get('/cartpage', function(req, res) {
 });
 router.get('/itempage', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/itempage.html'));
+});
+router.get('/productpage/12345678', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views/productPage.html'))
 });
 
 module.exports = router;

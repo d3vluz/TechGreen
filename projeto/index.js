@@ -14,6 +14,8 @@ const screensNavigationRouter = require('./src/routes/screensNavigationRouter');
 const loginRegisterRouter = require('./src/routes/loginRegisterRouter')
 const contactRouter = require('./src/routes/contactRouter');
 const perfilRouter = require('./src/routes/perfilRouter');
+const productRouter = require('./src/routes/productRouter')
+const registerProductRouter = require('./src/routes/registerProductRouter');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,6 +33,8 @@ app.use('/', screensNavigationRouter);
 app.use('/', loginRegisterRouter);
 app.use('/', contactRouter);
 app.use('/', perfilRouter);
+app.use('/', productRouter);
+app.use('/', registerProductRouter);
 
 
 app.listen(3000, () => {
