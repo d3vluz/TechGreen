@@ -13,6 +13,27 @@
     }
 }
 
+/* MAIN */
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .profile-title {
+        font-size: 2rem;
+    }
+
+    .profile-item {
+        font-size: 1rem;
+    }
+
+    .logout-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
 /* FOOTER */
 @media screen and (max-width: 768px) {
     .footer {

@@ -37,7 +37,17 @@
 
         <button class="openbtn" onclick="openNav()">☰</button> <!--NavButton-->   
     </header>
-
+    <main>
+        <h1 class="profile-title">Perfil do Usuário</h1>
+        <div class="profile-info">
+            <p class="profile-item">Nome: <span class="profile-data"><%= user.nome %></span></p>
+            <p class="profile-item">Sobrenome: <span class="profile-data"><%= user.sobrenome %></span></p>
+            <p class="profile-item">Celular: <span class="profile-data"><%= user.celular %></span></p>
+            <p class="profile-item">Email: <span class="profile-data"><%= user.email %></span></p>
+            <p class="profile-item">Data de Criação: <span class="profile-data"><%= user.createdAt %></span></p>
+            <a href="/logout" class="logout-button">Logout</a>
+        </div>
+    </main>
     <footer>
         <section class="footer">
             <div class="footer-box">
