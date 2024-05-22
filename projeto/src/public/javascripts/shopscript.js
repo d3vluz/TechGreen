@@ -12,6 +12,53 @@ window.addEventListener('resize', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const cartIcon = document.getElementById('cart-icon');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+
+    function addToCart(event) {
+        event.preventDefault();
+        const productElement = event.target.closest('.row');
+        const productId = productElement.getAttribute('data-id');
+        const productName = productElement.getAttribute('data-name');
+        const productPrice = productElement.getAttribute('data-price');
+        const productImage = productElement.getAttribute('data-image');
+        
+        const cartItem = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        const existingItemIndex = cart.findIndex(item => item.id === cartItem.id);
+        if (existingItemIndex > -1) {
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            cart.push(cartItem);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartIcon();
+    }
+
+    function updateCartIcon() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+        cartIcon.innerHTML = `<i class="ri-shopping-cart-2-line"></i><span class="cart-count">${totalItems}</span>`;
+    }
+
+    updateCartIcon();
+});
+
+
 /*document.getElementById('ver-mais').addEventListener('click', async function(event) {
     event.preventDefault(); // Evita a ação padrão do link
     

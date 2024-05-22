@@ -32,7 +32,7 @@
 
         <div class="nav-right">
             <a href="#"><i class="ri-search-line"></i></a>
-            <a href="/cartpage"><i class="ri-shopping-cart-2-line"></i></a>
+            <a href="/cartpage"><i class="ri-shopping-cart-2-line" id="cart-icon"></i></a>
             <a href="/perfil"><i class="ri-user-line"></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div> <!-- Fim nav-right -->
@@ -139,14 +139,14 @@
                 <div class="n-produtos">
                     <div class="n-conteudo">
                         <% products.forEach(product => { %>
-                            <div class="row">
+                            <div class="row" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-image="<%= product.image %>">
                                 <div class="row-img">
                                     <img src="<%= product.image %>" alt="<%= product.name %>">
                                 </div>
                                 <h3><%= product.name %></h3>
                                 <div class="row-in">
                                     <div class="row-left">
-                                        <a href="#">
+                                        <a href="#" class="add-to-cart-btn">
                                             Adicione ao carrinho
                                             <i class="ri-shopping-cart-2-line"></i>
                                         </a>
@@ -211,6 +211,6 @@
         </div> <!-- Fim copyright -->
     </footer>
     
-    <script src="/javascripts/shopscript.js"></script>
+    <script src="../public/javascripts/shopscript.js"></script>
 </body>
 </html>
