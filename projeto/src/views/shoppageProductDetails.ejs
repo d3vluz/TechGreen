@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <!-- Estilos -->
     <link rel="stylesheet" href="/stylesheets/shop.css">
     <link rel="stylesheet" href="/stylesheets/responsividade/shop-responsive.css"> <!-- Responsivo -->
@@ -17,6 +17,9 @@
     <!-- Fim Remix Icons -->
     <title>TechGreen</title>
 </head>
+<style>
+
+</style>
 <body>
     <!-- HEADER -->
     <header>
@@ -121,47 +124,48 @@
                         <p><span>216</span> produtos encontrados</p>
                     </div> <!-- F top-bar-total-products -->
                     
-                    <div class="top-bar-product-sorting">
-                        <p>Ordenado por:</p>
-                        <form action="#" method="get">
-                            <select name="select" id="sortByselect">
-                                <option value="value">Melhor Avaliado</option>
-                                <option value="value">Novidades</option>
-                                <option value="value">Preco: maior</option>
-                                <option value="value">Preço: menor</option>
-                            </select>
-                            <input type="submit" class="product-sort" value="">
-                        </form>
-                    </div> <!-- F top-bar-product-sorting -->
-                    
+                    <form action="#" method="get" id="sortForm">
+                        <select name="sortOption" id="sortByselect">
+                            <option value="melhor_avaliado">Melhor Avaliado</option>
+                            <option value="novidades">Novidades</option>
+                            <option value="preco_maior">Preço: maior</option>
+                            <option value="preco_menor">Preço: menor</option>
+                        </select>
+                        <input type="submit" class="product-sort" value="">
+                    </form><!-- F top-bar-product-sorting -->
                 </div> <!-- F top-bar-->
 
-                <div class="n-produtos">
-                    <div class="n-conteudo">
-                        <% products.forEach(product => { %>
-                            <div class="row">
-                                <div class="row-img">
-                                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                <div class="n-conteudo" id="productContainer">
+                    <% products.forEach(product => { %>
+                        <div class="row">
+                            <div class="row-img">
+                                <img src="<%= product.image %>" alt="<%= product.name %>">
+                            </div>
+                            <h3><%= product.name %></h3>
+                            <div class="row-in">
+                                <div class="row-left">
+                                    <a href="#">
+                                        Adicione ao carrinho
+                                        <i class="ri-shopping-cart-2-line"></i>
+                                    </a>
                                 </div>
-                                <h3><%= product.name %></h3>
-                                <div class="row-in">
-                                    <div class="row-left">
-                                        <a href="#">
-                                            Adicione ao carrinho
-                                            <i class="ri-shopping-cart-2-line"></i>
-                                        </a>
-                                    </div>
-                                    <div class="row-right">
-                                        <h6>R$ <%= product.price %></h6>
-                                    </div>
+                                <div class="row-right">
+                                    <h6>R$ <%= product.price %></h6>
                                 </div>
                             </div>
-                        <% }) %>
-                    </div>
+                            <div class="product-rating" data-rating="<%= product.rating %>">
+                               
+                            </div>
+                        
+                        </div>
+                    <% }) %>
+                </div>
+                
         
                     <div class="n-btn" id="ver-mais">
-                        <a href="#" class="btn2">Ver Mais</a>
-                    </div> <!-- Fim n-btn -->
+                        <a href="#" class="btn2" onclick="showNextProducts(); return false;">Ver Mais</a>
+                    </div>
+                     <!-- Fim n-btn -->
                 </div> <!-- Fim n-produtos -->
             </div> <!-- F item-container -->
         </section> <!-- F shop-menu-->
@@ -211,6 +215,79 @@
         </div> <!-- Fim copyright -->
     </footer>
     
-    <script src="/javascripts/shopscript.js"></script>
 </body>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const productContainer = document.getElementById('productContainer');
+        const products = Array.from(productContainer.getElementsByClassName('row'));
+        let currentIndex = 0;
+        const productsPerPage = 10;
+
+        function showNextProducts() {
+            const nextProducts = products.slice(currentIndex, currentIndex + productsPerPage);
+            nextProducts.forEach(product => {
+                product.style.display = 'block';
+            });
+            currentIndex += productsPerPage;
+
+            if (currentIndex >= products.length) {
+                document.getElementById('ver-mais').style.display = 'none';
+            }
+        }
+
+      
+        showNextProducts();
+
+        document.getElementById('ver-mais').addEventListener('click', function(e) {
+            e.preventDefault();
+            showNextProducts();
+        });
+
+        const sortBySelect = document.getElementById('sortByselect');
+
+        sortBySelect.addEventListener('change', function() {
+            const sortOption = sortBySelect.value;
+
+            let sortedProducts;
+
+            if (sortOption === 'preco_menor') {
+                sortedProducts = products.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.row-right h6').innerText.replace('R$', '').replace(',', '.'));
+                    const priceB = parseFloat(b.querySelector('.row-right h6').innerText.replace('R$', '').replace(',', '.'));
+                    return priceA - priceB;
+                });
+            } else if (sortOption === 'preco_maior') {
+                sortedProducts = products.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.row-right h6').innerText.replace('R$', '').replace(',', '.'));
+                    const priceB = parseFloat(b.querySelector('.row-right h6').innerText.replace('R$', '').replace(',', '.'));
+                    return priceB - priceA;
+                });
+            } else if (sortOption === 'melhor_avaliado') {
+                sortedProducts = products.sort((a, b) => {
+                    const ratingA = parseFloat(a.querySelector('.product-rating').dataset.rating);
+                    const ratingB = parseFloat(b.querySelector('.product-rating').dataset.rating);
+                    return ratingB - ratingA;
+                });
+            } else if (sortOption === 'novidades') {
+                sortedProducts = products.sort((a, b) => {
+                    const dateA = new Date(a.dataset.releaseDate);
+                    const dateB = new Date(b.dataset.releaseDate);
+                    return dateB - dateA;
+                });
+            }
+
+            productContainer.innerHTML = '';
+            sortedProducts.forEach(product => {
+                product.style.display = 'none';
+                productContainer.appendChild(product);
+            });
+
+            currentIndex = 0;
+            showNextProducts();
+            document.getElementById('ver-mais').style.display = currentIndex < products.length ? 'block' : 'none';
+        });
+    });
+</script>
+
+
