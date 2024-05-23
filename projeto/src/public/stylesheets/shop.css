@@ -167,6 +167,231 @@ header{
     }
 }
 
+/* Conteúdo Shop*/
+
+.banner{
+    background-color: var(--cor-dois);
+    margin-top: 80px;
+    height: 280px;
+    background-image: url('banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shop-menu{
+    display: flex;
+
+    & .text-info{
+        padding: 0px 15px;
+        margin-right: 15px;
+    
+        & > h6{
+            font-size: 18px;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-family: "Ubuntu",sans-serif;
+            line-height: 1.3;
+        }
+    
+        & .menu-type {
+            margin-bottom: 15px;
+        
+            & p{
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 15px;
+                font-size: 12px;
+            }
+        
+            & ul {
+        
+                & > li a{
+                    text-transform: capitalize;
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin: 0 0 5px 10px;
+                    color: #787878;
+                    transition: all .6s;
+    
+                    &:hover{
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        & .brand-filter{
+            & p{
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        
+            & ul li a{
+                text-transform: capitalize;
+                font-weight: 300;
+                font-size: 14px;
+                margin: 0 0 5px 10px;
+                color: #787878;
+
+                &:hover{
+                    color: #000000;
+                }
+            }
+        }
+    }
+
+    & .items-container{
+        width: 100%;
+
+        & .top-bar{
+            width: auto;
+            padding: 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            
+            & .top-bar-total-products{
+                display: flex;
+        
+                & > p{
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: var(--cor-texto);
+                    text-transform: uppercase;
+                    letter-spacing: 0.75px;
+        
+                    & >span{
+                        color: var(--cor-dois);
+                    }
+                }
+            }
+        
+            & .top-bar-product-sorting{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+        
+                & > p{
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: var(--cor-texto);
+                    text-transform: uppercase;
+                    letter-spacing: 0.75px;
+                }
+        
+                & form{
+                    display: flex;
+                    align-items: center;
+        
+                    & select{
+                        background-color: transparent;
+                        border: none
+                    }
+                }
+            }
+        }
+
+        & .n-produtos{
+            & .n-conteudo {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+
+                & .row{
+                    max-width: 250px;
+
+                    & .row-img {
+                        overflow: hidden;
+                        border-radius: 28px;
+                        margin-bottom: 15px;
+                    
+                        & img {
+                            display: block;
+                            width: 100%;
+                            transition: transform 0.5s;
+                            cursor: pointer;
+                        }
+                    
+                        &:hover img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    & h3{
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 1.3;
+                        margin-bottom: 5px;
+                    }
+
+                    & .row-in {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 5px;
+
+                        & .row-left{
+
+                            & a{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: var(--cor-texto);
+                                transition: all 0.6s;
+                            
+                                &:hover {
+                                    color: var(--cor-texto);
+                                } 
+                            }
+
+                            & i {
+                                margin-left: 6px;
+                            }
+                        }
+
+                        & .row-right{
+
+                            & h6{
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: var(--cor-um);                               
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .n-btn {
+                text-align: center;
+                margin-top: 4rem;
+
+                & .btn2 {
+                    display: inline-block;
+                    padding: 14px 42px;
+                    background: transparent;
+                    color: var(--cor-texto);
+                    font-size: 15px;
+                    font-weight: 500;
+                    border: 1px solid var(--cor-um);
+                    border-radius: 30px;
+                    transition: all 0.6s;
+                
+                    &:hover {
+                        background-color: var(--cor-texto);
+                        border: 1px solid var(--cor-texto);
+                        color: var(--cor-bg);
+                        transform: scale(0.9) translateY(-6px);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* FOOTER */
 .footer {
     display: grid;
