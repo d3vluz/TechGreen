@@ -54,9 +54,7 @@
     </header>
     <!-- MAIN -->
     <main>
-        <section class="banner">
-            <img src="" alt="">
-        </section> <!-- F banner -->
+        <section class="banner"></section>
 
         <section class="shop-menu">
             <div class="text-info">
@@ -124,15 +122,18 @@
                         <p><span>216</span> produtos encontrados</p>
                     </div> <!-- F top-bar-total-products -->
                     
-                    <form action="#" method="get" id="sortForm">
-                        <select name="sortOption" id="sortByselect">
-                            <option value="melhor_avaliado">Melhor Avaliado</option>
-                            <option value="novidades">Novidades</option>
-                            <option value="preco_maior">Preço: maior</option>
-                            <option value="preco_menor">Preço: menor</option>
-                        </select>
-                        <input type="submit" class="product-sort" value="">
-                    </form><!-- F top-bar-product-sorting -->
+                    <div class="top-bar-product-sorting">
+                        <p>Ordenado por: </p>
+                        <form action="#" method="get" id="sortForm">
+                            <select name="sortOption" id="sortByselect">
+                                <option value="melhor_avaliado">Melhor Avaliado</option>
+                                <option value="novidades">Novidades</option>
+                                <option value="preco_maior">Preço: maior</option>
+                                <option value="preco_menor">Preço: menor</option>
+                            </select>
+                            <input type="submit" class="product-sort" value="">
+                        </form>
+                    </div><!-- F top-bar-product-sorting -->
                 </div> <!-- F top-bar-->
 
                 <div class="n-conteudo" id="productContainer">
