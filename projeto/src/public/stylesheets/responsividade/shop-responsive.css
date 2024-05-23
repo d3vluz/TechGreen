@@ -1,3 +1,4 @@
+/*NAVBAR*/
 @media screen and (max-width: 1300px){
     .openbtn {
         display: block;
@@ -44,6 +45,7 @@
     }
 }
 
+/* FOOTER */
 @media screen and (max-width: 768px) {
     .footer {
         grid-template-columns: 1fr; 
