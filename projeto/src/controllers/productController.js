@@ -37,6 +37,21 @@ exports.getProducts = async (req, res) => {
     }
 }
 
+exports.getProductById = async (req, res) => {
+    try {
+        const productId = req.params.id;
+        const product = await Product.findById(productId);
+
+        if (!product) {
+            return res.status(404).render('404', { message: 'Produto não encontrado' });
+        }
+
+        res.render(path.join(__dirname, '../views/shoppageProductDetail.ejs'), { product })
+    } catch (error) {
+        res.status(500).render('error', { message: 'Erro ao buscar o produto' });
+    }
+};
+
 //----------------
 
 exports.getBestSellersAndGetTopRatedProducts = async (req, res) => {

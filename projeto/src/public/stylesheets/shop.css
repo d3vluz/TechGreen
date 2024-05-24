@@ -446,3 +446,9 @@ header{
     overflow-y: auto; /* Habilita o scroll vertical */
     padding-right: 15px; /* Ajuste conforme necessário */
 }
+
+.stars a {
+    font-size: 16px;
+    color: #ffc633;
+    margin-right: 5px;
+}

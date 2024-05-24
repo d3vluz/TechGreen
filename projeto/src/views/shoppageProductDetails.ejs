@@ -139,7 +139,9 @@
                     <% products.forEach(product => { %>
                         <div class="row">
                             <div class="row-img">
-                                <img src="<%= product.image %>" alt="<%= product.name %>">
+                                <a href="/product/<%= product._id %>">
+                                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                                </a>
                             </div>
                             <h3><%= product.name %></h3>
                             <div class="row-in">
@@ -153,13 +155,16 @@
                                     <h6>R$ <%= product.price %></h6>
                                 </div>
                             </div>
-                            <div class="product-rating" data-rating="<%= product.rating %>">
-                               
-                            </div>
-                        
+                            <div class="stars">
+                                <% for (let i = 0; i < 5; i++) { %>
+                                    <a href="#"><i class="<%= i < product.rating ? 'ri-star-fill' : 'ri-star-line' %>"></i></a>
+                                <% } %>
+                                <a href="#"><%= product.rating %>/5</a>
+                            </div> <!-- Fim stars -->
                         </div>
                     <% }) %>
                 </div>
+                
                 
         
                     <div class="n-btn" id="ver-mais">
