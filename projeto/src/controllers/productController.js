@@ -42,16 +42,31 @@ exports.getProductById = async (req, res) => {
     try {
         const productId = req.params.id;
         const product = await Product.findById(productId);
-
+        const topProducts = await getFourProdutcs();
         if (!product) {
             return res.status(404).render('404', { message: 'Produto não encontrado' });
         }
 
-        res.render(path.join(__dirname, '../views/itempage.ejs'), { product })
+        res.render(path.join(__dirname, '../views/itempage.ejs'), { product, topProducts })
     } catch (error) {
         res.status(500).render('error', { message: 'Erro ao buscar o produto' });
     }
 };
+
+let getFourProdutcs = async (req, res) => {
+    try {
+        const topProducts = await Product.aggregate([
+            { $match: { isBestSeller: true } },
+            { $sample: { size: 5 } }
+        ])
+        if (!topProducts) {
+            return res.status(404).send("Produtos não encontrados.");
+        }
+        return topProducts
+    } catch (error) {
+        res.status(500).send("Erro no servidor");
+    }
+}
 
 //----------------
 

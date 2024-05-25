@@ -100,93 +100,28 @@
                 <p>Ache extamente o que procura!</p>
             </div>
             <div class="n-conteudo">
-                    <!-- n1 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/images/bg.jpg" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
-                    
-                    
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
+                <% topProducts.forEach(product => { %>
+                    <div class="row">
+                        <div class="row-img">
+                            <a href="/product/<%= product._id %>">
+                                <img src="<%= product.image %>" alt="<%= product.name %>">
                             </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 79,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n2 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/images/bg.jpg" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 109,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n3 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/images/bg.jpg" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-
-                        <div class="row-right">
-                            <h6>R$ 97,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
-
-                    <!-- n4 -->
-                <div class="row">
-                    <div class="row-img">
-                        <img src="/images/bg.jpg" alt="#">
-                    </div> <!-- Fim row-img -->
-
-                    <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <a href="#">
-                                Adicione ao carrinho
-                                <i class="ri-shopping-cart-2-line"></i>
-                            </a>
-                        </div> <!-- Fim row-left -->
-                        <div class="row-right">
-                            <h6>R$ 69,99</h6>
-                        </div> <!-- Fim row-right -->
-                    </div> <!-- Fim row-in -->
-                </div> <!-- Fim row -->
+                        </div> <!-- Fim row-img -->
+                        <h3><%= product.name %></h3>
+                        <div class="row-in">
+                            <div class="row-left">
+                                <a href="#">
+                                    Adicione ao carrinho
+                                    <i class="ri-shopping-cart-2-line"></i>
+                                </a>
+                            </div> <!-- Fim row-left -->
+                            <div class="row-right">
+                                <h6>R$ <%= product.price.toFixed(2) %></h6>
+                            </div> <!-- Fim row-right -->
+                        </div> <!-- Fim row-in -->
+                    </div> <!-- Fim row -->
+                <% }) %>
+            </div> <!-- Fim n-conteudo -->
         </div> <!-- Fim n-produtos -->
     </main>
     
@@ -234,22 +169,6 @@
         </div> <!-- Fim copyright -->
     </footer>
 
-    <script>
-        var MainImg = document.getElementById("MainImg")
-        var smallimg = document.getElementsByClassName("small-img")
-
-        smallimg[0].onclick = function(){
-            MainImg.src = smallimg[0].src
-        }
-        smallimg[1].onclick = function(){
-            MainImg.src = smallimg[1].src
-        }
-        smallimg[2].onclick = function(){
-            MainImg.src = smallimg[2].src
-        }
-        smallimg[3].onclick = function(){
-            MainImg.src = smallimg[3].src
-        }
-    </script>
+    <script src="/javascripts/itempagescript.js"></script>
 </body>
 </html>
