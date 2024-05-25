@@ -201,7 +201,7 @@ i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 10px 0px 10px 0px;
 }
 
 #signup .input-box{

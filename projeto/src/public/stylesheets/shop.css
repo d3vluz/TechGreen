@@ -241,6 +241,16 @@ header{
 
 /* SECTION PRODUTOS */
 
+.banner{
+    background-color: var(--cor-dois);
+    margin-top: 80px;
+    height: 280px;
+    background-image: url('../images/banner_shoppage.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .shop-menu{
     display: flex;
 }

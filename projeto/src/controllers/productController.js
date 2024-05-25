@@ -27,8 +27,9 @@ exports.uploadProducts = async (req, res) => {
 exports.getProducts = async (req, res) => {
     try {
         const products = await Product.find();
+        const productsTotal = await Product.countDocuments({});
         if(products) {
-            res.render(path.join(__dirname, '../views/shoppageProductDetails.ejs'), { products })
+            res.render(path.join(__dirname, '../views/shoppageProductDetails.ejs'), { products, productsTotal })
         } else {
             return res.status(404).send("Produtos não encontrados.");
         }
