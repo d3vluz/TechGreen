@@ -55,30 +55,30 @@
     <main>
         <section id= "product-details" class="section-product">
             <div class="single-item-image">
-                <img src="../public/images/bg.jpg" width= "100%" id="MainImg" alt="">
+                <img src="<%= product.image %>" width= "100%" id="MainImg" alt="">
 
                 <div class="small-image-group">
                     <div class="small-img-col">
-                        <img src="../public/images/bg.jpg" width="100%" class="small-img" alt="">
+                        <img src="<%= product.image %>" width="100%" class="small-img" alt="">
                     </div> <!-- F small-image-col -->
 
                     <div class="small-img-col">
-                        <img src="../public/images/bg.jpg" width="100%" class="small-img" alt="">
+                        <img src="<%= product.image %>" width="100%" class="small-img" alt="">
                     </div> <!-- F small-image-col -->
 
                     <div class="small-img-col">
-                        <img src="../public/images/bg.jpg" width="100%" class="small-img" alt="">
+                        <img src="<%= product.image %>" width="100%" class="small-img" alt="">
                     </div> <!-- F small-image-col -->
                     <div class="small-img-col">
-                        <img src="../public/images/bg.jpg" width="100%" class="small-img" alt="">
+                        <img src="<%= product.image %>" width="100%" class="small-img" alt="">
                     </div> <!-- F small-image-col -->
                 </div> <!-- F small-image-group -->
             </div> <!-- F single-item-image -->
 
             <div class="single-item-details">
                 <h6>Categoria</h6>
-                <h4>Nome do Item</h4>
-                <h2>Preço</h2>
+                <h4><%= product.name %></h4>
+                <h2>R$ <%= product.price.toFixed(2) %></h2>
                 <select>
                     <option>Selecione a Cor</option>
                     <option>Vermelho</option>
@@ -90,7 +90,7 @@
                 <input type="number" value="1">
                 <button>Adicione ao Carrinho</button>
                 <h4>Detalhes do produto</h4>
-                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, repellat doloribus ipsa fugit minima cumque sint hic dicta quisquam quam. Quas inventore, nam repellendus magni vitae autem est necessitatibus ducimus!</span>
+                <span><%= product.description %></span>
             </div>
         </section>
 
@@ -103,7 +103,7 @@
                     <!-- n1 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="../public/images/bg.jpg" alt="#">
+                        <img src="/images/bg.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camiseta Listrada</h3> <!-- NOME PRODUTO -->
@@ -126,7 +126,7 @@
                     <!-- n2 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="../public/images/bg.jpg" alt="#">
+                        <img src="/images/bg.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Calça Jeans</h3> <!-- NOME PRODUTO -->
@@ -148,7 +148,7 @@
                     <!-- n3 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="../public/images/bg.jpg" alt="#">
+                        <img src="/images/bg.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camisa Xadrez</h3> <!-- NOME PRODUTO -->
@@ -170,7 +170,7 @@
                     <!-- n4 -->
                 <div class="row">
                     <div class="row-img">
-                        <img src="../public/images/bg.jpg" alt="#">
+                        <img src="/images/bg.jpg" alt="#">
                     </div> <!-- Fim row-img -->
 
                     <h3>Camisa de marca</h3> <!-- NOME PRODUTO -->

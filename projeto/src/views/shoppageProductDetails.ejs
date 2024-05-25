@@ -144,6 +144,12 @@
                                 </a>
                             </div>
                             <h3><%= product.name %></h3>
+                            <div class="stars">
+                                <% for (let i = 0; i < 5; i++) { %>
+                                    <a href="#"><i class="<%= i < product.rating ? 'ri-star-fill' : 'ri-star-line' %>"></i></a>
+                                <% } %>
+                                <a href="#"><%= product.rating %>/5</a>
+                            </div> <!-- Fim stars -->
                             <div class="row-in">
                                 <div class="row-left">
                                     <a href="#">
@@ -155,12 +161,6 @@
                                     <h6>R$ <%= product.price %></h6>
                                 </div>
                             </div>
-                            <div class="stars">
-                                <% for (let i = 0; i < 5; i++) { %>
-                                    <a href="#"><i class="<%= i < product.rating ? 'ri-star-fill' : 'ri-star-line' %>"></i></a>
-                                <% } %>
-                                <a href="#"><%= product.rating %>/5</a>
-                            </div> <!-- Fim stars -->
                         </div>
                     <% }) %>
                 </div>

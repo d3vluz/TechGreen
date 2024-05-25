@@ -47,7 +47,7 @@ exports.getProductById = async (req, res) => {
             return res.status(404).render('404', { message: 'Produto não encontrado' });
         }
 
-        res.render(path.join(__dirname, '../views/shoppageProductDetail.ejs'), { product })
+        res.render(path.join(__dirname, '../views/itempage.ejs'), { product })
     } catch (error) {
         res.status(500).render('error', { message: 'Erro ao buscar o produto' });
     }
