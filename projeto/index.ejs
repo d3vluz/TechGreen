@@ -73,7 +73,9 @@
                     <% bestSellers.forEach(product => { %>
                         <div class="row">
                             <div class="row-img">
-                                <img src="<%= product.image %>" alt="<%= product.name %>">
+                                <a href="/product/<%= product._id %>">
+                                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                                </a>
                             </div> <!-- Fim row-img -->
                             <h3><%= product.name %></h3> <!-- NOME PRODUTO -->
                             <div class="stars">
@@ -111,7 +113,9 @@
                     <% topRatedProducts.forEach(product => { %>
                         <div class="row">
                             <div class="row-img">
-                                <img src="<%= product.image %>" alt="<%= product.name %>">
+                                <a href="/product/<%= product._id %>">
+                                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                                </a>
                             </div> <!-- Fim row-img -->
                             <h3><%= product.name %></h3> <!-- NOME PRODUTO -->
                             <div class="stars">
