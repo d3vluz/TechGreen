@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const productContainer = document.getElementById('productContainer');
     const products = Array.from(productContainer.getElementsByClassName('row'));
-    let currentIndex = 0;
     const productsPerPage = 10;
-
+    let currentIndex = 0;
+    
     function showNextProducts() {
         const nextProducts = products.slice(currentIndex, currentIndex + productsPerPage);
         nextProducts.forEach(product => {
@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-  
-    showNextProducts();
+   
+    products.forEach((product, index) => {
+        if (index >= productsPerPage) {
+            product.style.display = 'none';
+        }
+    });
 
     document.getElementById('ver-mais').addEventListener('click', function(e) {
         e.preventDefault();
