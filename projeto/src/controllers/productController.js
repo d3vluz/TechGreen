@@ -57,7 +57,7 @@ let getFourProdutcs = async (req, res) => {
     try {
         const topProducts = await Product.aggregate([
             { $match: { isBestSeller: true } },
-            { $sample: { size: 5 } }
+            { $sample: { size: 4 } }
         ])
         if (!topProducts) {
             return res.status(404).send("Produtos não encontrados.");
