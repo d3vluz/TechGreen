@@ -197,17 +197,17 @@
     display: inline-block;
     padding: 14px 42px;
     background: transparent;
-    color: var(--cor-texto);
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 500;
-    border: 1px solid var(--cor-um);
+    border: 1px solid var(--text-color);
     border-radius: 30px;
     transition: all 0.6s;
 
     &:hover {
-        background-color: var(--cor-texto);
-        border: 1px solid var(--cor-texto);
-        color: var(--cor-bg);
+        background-color: var(--text-color);
+        border: 1px solid var(--text-color);
+        color: var(--bg-color);
         transform: scale(0.9) translateY(-6px);
     }
 }

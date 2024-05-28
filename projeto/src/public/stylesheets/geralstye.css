@@ -18,13 +18,10 @@
 :root{
     --bg-color: #ffffff;
     --text-color: #181818;
-    --main-color: #f0f0f0;
-    --second-color: #616060; 
-    --theme-color: #099209;
-
-    --primary-color: #181818;
-
-    --btn-color: #181818;
+    --color-dark-green: #435334;
+    --color-mid-green: #9EB384; 
+    --color-light-green: #099209;
+    --color-light-try: #FAF1E4;
 
     --h1-font: 4.0rem;
     --h2-font: 3.0rem;
@@ -66,7 +63,7 @@ header{
     color: var(--text-color);
 
     & > span{
-        color: green;
+        color: var(--color-light-green);
     }
 }
 
@@ -87,13 +84,13 @@ header{
     
             &:hover,
             &.ativo{
-                color: var(--theme-color);
+                color: var(--color-light-green);
     
                 &::after{
                     content: "";
                     width: 30%;
                     height: 2px;
-                    background: var(--theme-color);
+                    background: var(--color-light-green);
                     position: absolute;
                     bottom: -2px;
                     left: 20px;
@@ -134,7 +131,7 @@ header{
     display: none;
     cursor: pointer;
     background-color: transparent;
-    color: var(--btn-color);
+    color: var(--text-color);
     border: none;
     border-radius: 20%;
 }
@@ -146,7 +143,7 @@ header{
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px; 
@@ -155,7 +152,7 @@ header{
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #ffffff;
+        color: var(--text-color);
         display: block;
         transition: 0.3s;
     }
@@ -188,13 +185,13 @@ header{
     }
 
     & a {
-        color: var(--cor-um);
+        color: var(--text-color);
         margin-bottom: 0.8rem;
         transition: all 0.5s ease;
 
         &:hover {
             transform: translateX(-5px);
-            color: var(--cor-texto);
+            color: var(--color-light-green);
         }
     }
 }
@@ -205,8 +202,8 @@ header{
     justify-content: center;
     height: 40px;
     width: 40px;
-    background: var(--cor-texto);
-    color: var(--cor-bg);
+    background: var(--text-color);
+    color: var(--bg-color);
     font-size: 17px;
     border-radius: 10px;
     margin-right: 14px;
@@ -214,7 +211,7 @@ header{
 
     &:hover {
         transform: rotate3d(0, 0.5, 0, 360deg) scale(1.06);
-        color: var(--cor-bg);
+        color: var(--bg-color);
     }
 }
 
@@ -231,13 +228,13 @@ header{
     font-size: 15px;
 
     & a {
-        color: var(--cor-texto);
+        color: var(--text-color);
         cursor: pointer;
         transition: all 0.6s;
 
         &:hover {
             text-decoration: underline;
-            color: #099209;
+            color: var(--color-light-green);
         }
     }
 }
