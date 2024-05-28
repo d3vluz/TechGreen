@@ -48,3 +48,65 @@ document.getElementById("signup").addEventListener("submit", function(event) {
         event.preventDefault(); 
     }
 });
+
+document.getElementById('signin').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('emailSignin').value;
+    const senha = document.getElementById('senhaSignin').value;
+
+    try {
+        const response = await fetch('/signin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, senha })
+        });
+
+        const result = await response.text(); 
+        
+        if (response.status === 401 || response.status === 404) {
+            alert(result);
+        } else if (response.status === 200) {
+            window.location.href = '/home'; 
+        } else {
+            alert('Erro ao tentar fazer login.');
+        }
+    } catch (error) {
+        alert('Erro ao tentar fazer login.');
+    }
+});
+
+document.getElementById('signup').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nomeSignup').value;
+    const sobrenome = document.getElementById('sobrenomeSignup').value
+    const email = document.getElementById('emailSignup').value;
+    const senha = document.getElementById('senhaSignup').value;
+    const celular = document.getElementById('celularSignup').value; 
+
+    try {
+        const response = await fetch('/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nome, sobrenome, email, senha, celular })
+        });
+
+        const result = await response.text(); 
+        
+        if (response.status === 400) {
+            alert(result);
+        } else if (response.status === 200) {
+            window.location.href = '/home'; 
+        } else {
+            alert('Erro ao tentar fazer login.');
+        }
+    } catch (error) {
+        alert('Erro ao tentar fazer login.');
+    }
+
+});

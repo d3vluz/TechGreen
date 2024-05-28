@@ -1,6 +1,4 @@
 /* RESPONSIVO */
-
-/*NAVBAR*/
 @media screen and (max-width: 1300px){
     .openbtn {
         display: block;
@@ -13,7 +11,53 @@
     }
 }
 
-/*SERVIÇOS*/
+@media (max-width: 999px) {
+
+    .main {
+        gap: 90px;
+    }
+
+    .main-box {
+        grid-template-columns: 1fr; 
+        gap: 50px;
+    }
+
+    .main-box:nth-child(2) .text-one,
+    .main-box:nth-child(1) .image-one {
+        order: 1; 
+    }
+
+    .main-box-text {
+        min-width: auto;
+        text-align: center;
+        & h2 {
+            font-size: 2.5rem;
+            color: var(--text-color); 
+        }
+        
+        & p {
+            font-size: var(--p-font);
+            color: var(--text-color); 
+            line-height: 33px;
+            margin-top: 35px;
+        }
+    }
+
+    .main-box-image img {
+        width: 80%; 
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1299px) {
+
+    .main-box {
+        grid-template-columns: 600px 600px; 
+        gap: 0px 50px; 
+    }
+
+}
 
 @media screen and (max-width: 768px) {
     .box-service {
@@ -22,6 +66,16 @@
 
     .service-template-image {
         max-height: 150px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr; 
+        justify-content: center;
+    }
+
+    .footer-box {
+        text-align: center; 
+        margin-bottom: 2rem; 
     }
 }
 
@@ -32,19 +86,5 @@
 
     .service-template-image {
         max-height: 100px;
-    }
-}
-
-
-/* FOOTER */
-@media screen and (max-width: 768px) {
-    .footer {
-        grid-template-columns: 1fr; 
-        justify-content: center;
-    }
-
-    .footer-box {
-        text-align: center; 
-        margin-bottom: 2rem; 
     }
 }
