@@ -44,10 +44,10 @@
         transition: all .6s;
 
         &:hover{
-            color: red;
+            color: var(--color-light-green);
 
             &::after{
-                background-color: red;
+                background-color: var(--color-light-green);
             }
         }
 
